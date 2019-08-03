@@ -25,6 +25,7 @@
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
 \name{Rohit Gohri} % Your name
 \address{New Delhi, India} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
@@ -38,11 +39,11 @@
 
 \begin{rSection}{Education}
 
-{\bf Netaji Subhas Institute of Technology, University of Delhi} \hfill {\em July 2013 - July 2017} 
-\\ B.E. Computer Engineering \hfill { Overall GPA: 7.35/10}
-%Minor in Linguistics \smallskip \\
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
+    {\bf Netaji Subhas Institute of Technology, University of Delhi} \hfill {\em July 2013 - July 2017} 
+    \\ B.E. Computer Engineering \hfill { Overall GPA: 7.35/10}
+        %Minor in Linguistics \smallskip \\
+        %Member of Eta Kappa Nu \\
+        %Member of Upsilon Pi Epsilon \\
 
 \end{rSection}
 
@@ -51,32 +52,36 @@
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{Projects}
 
-\begin{rSubsection}
-{Adaptive Traffic Control Using Reinforcement Learning}{Jan 2017 - June 2017}{Bachelor Thesis Project}{}
-\item Ran study comparing different methods to reduce traffic in a simulator(SUMO)
-\item Automated vehicle generation and traffic light control in SUMO using Python
-\item Used RL to calculate the next traffic light phase using current traffic conditions
-\end{rSubsection}
+    \begin{rSubsection}{Adaptive Traffic Control Using Reinforcement Learning}{Jan 2017 - June 2017}
+    {Bachelor Thesis Project}{<link>}
 
-\begin{rSubsection}
-{Innovision}{Jan 2016 - March 2016}{Fest Website}{}
-\item Led a team of 3 to make the website for NSIT’s Tech Fest using NodeJS \& MongoDB
-\item Worked on various features: user registrations, event management, and email notifications
-\item The site had managed a traffic of over 65K views and 5K signups during the festival
-\end{rSubsection}
+        \item Ran study comparing different methods to reduce traffic in a simulator(SUMO)
+        \item Automated vehicle generation and traffic light control in SUMO using Python
+        \item Used RL to calculate the next traffic light phase using current traffic conditions
+    \end{rSubsection}
+
+    \begin{rSubsection}{Innovision}{Jan 2016 - March 2016}
+    {Fest Website}{<link>}
+
+        \item Led a team of 3 to make the website for NSIT’s Tech Fest using NodeJS \& MongoDB
+        \item Worked on various features: user registrations, event management, and email notifications
+        \item The site had managed a traffic of over 65K views and 5K signups during the festival
+    \end{rSubsection}
 
 \end{rSection}
+
 %----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
+%	SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Skills}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages &  Javascript, Typescript, C++ \\
-Software \& Tools & Ansible, ELK Stack, Grafana, VueJS, Redis, DroneCI \\
-Other & Adobe Photoshop, Lightroom, InDesign 
-\end{tabular}
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+        Computer Languages &  Javascript, Typescript, C++ \\
+        Software \& Tools & Ansible, ELK Stack, Grafana, VueJS, Redis, DroneCI \\
+        Other & Adobe Photoshop, Lightroom, InDesign 
+    \end{tabular}
 
 \end{rSection}
 
@@ -86,78 +91,91 @@ Other & Adobe Photoshop, Lightroom, InDesign
 
 \begin{rSection}{Work Experience}
 
-\begin{rSubsection}{Smartprix}{Sep 2015 - Present}{Software Developer}{}
-\item Setup a CI pipeline to increase coverage by 26\% \& run integration tests across repos
-\item Responsible for deployment and infrastructure configuration with PM2 \& Ansible
-\item Added logs \& visit stats to ElasticSearch, made dashboards for the same in Kibana
-\item Enabled static type checking with Typescript type definitions in projects
-\item Improved a GraphQL schema and query builder to support extending interfaces
-\item Migrated legacy jQuery code to a modern Webpack build system
-\end{rSubsection}
+    \begin{rSubsection}{Smartprix}{Sep 2015 - Present}
+        {Software Developer}{Noida, India}
 
+        \item Setup a CI pipeline to increase coverage by 26\% \& run integration tests across repos
+        \item Responsible for deployment and infrastructure configuration with PM2 \& Ansible
+        \item Added logs \& visit stats to ElasticSearch, made dashboards for the same in Kibana
+        \item Enabled static type checking with Typescript type definitions in projects
+        \item Improved a GraphQL schema and query builder to support extending interfaces
+        \item Migrated legacy jQuery code to a modern Webpack build system
+    \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{Woobus}{Dec 2015 - Jan 2016}{Software Development Intern}{}
-\item A Cordova App that works with a RaspberryPi to provide offline experiences
-\item Incorporated REST API calls for Audit Reporting into an ExpressJS server
-\item Created an Android app for generating \& submitting audit reports to a server
-\end{rSubsection}
+    \begin{rSubsection}{Woobus}{Dec 2015 - Jan 2016}
+        {Software Development Intern}{Bangalore, India}
+
+        \item A Cordova App that works with a RaspberryPi to provide offline experiences
+        \item Incorporated REST API calls for Audit Reporting into an ExpressJS server
+        \item Created an Android app for generating \& submitting audit reports to a server
+    \end{rSubsection}
 
 \end{rSection}
 
 
-%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTIONS
 %----------------------------------------------------------------------------------------
 
 % \begin{rSection}{Academic Achievements} \itemsep -2pt
-% \item Ranked in National Top 0.2\% (amongst 1,200,000 candidates) in JEE Mains 2013 and Top 1\% (amongst 150,000 candidates) in IIT-JEE Advanced 2013
-% \item Ranked in the State-wise Top 1\% (amongst 70,000 candidates) in State level Engineering competitive Exam (MP PET)
-% \item Stood first in MBD Talent Search Exam conducted by state government, competing against more than 1000 participants  
+%     \item Ranked in National Top 0.2\% (amongst 1,200,000 candidates) in JEE Mains 2013 and Top 1\% (amongst 150,000 candidates) in IIT-JEE Advanced 2013
+%     \item Ranked in the State-wise Top 1\% (amongst 70,000 candidates) in State level Engineering competitive Exam (MP PET)
+%     \item Stood first in MBD Talent Search Exam conducted by state government, competing against more than 1000 participants  
+% \end{rSection}
+
+% \begin{rSection}{Relevant Courses}
+%     \itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{Other Courses}}
+
+%     \\ \itab{Fluid Mechanics \& its applications } \tab{}  \tab{Computational Methods in Engineering}
+%     \\ \itab{Thermodynamics} \tab{}  \tab{Fundamental of Computing} 
+%     \\ \itab{Heat Transfer \& its applications} \tab{}  \tab{Probability and Statistics} 
+%     \\ \itab{Mass Transfer \& its applications} \tab{} \tab{Calculus \& Linear Algebra}
+%     \\ \itab{Transport Phenomena (ongoing)} \tab{} \tab{Introduction to Mechanics}
+%     \\ \itab{Process Control (ongoing)} \tab{} \tab{Electrodynamics}
 % \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% \begin{rSection}{Relevant Courses}
-% \itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{Other Courses}}
-% \\ \itab{Fluid Mechanics \& its applications } \tab{}  \tab{Computational Methods in Engineering}
-% \\ \itab{Thermodynamics} \tab{}  \tab{Fundamental of Computing} 
-% \\ \itab{Heat Transfer \& its applications} \tab{}  \tab{Probability and Statistics} 
-% \\ \itab{Mass Transfer \& its applications} \tab{} \tab{Calculus \& Linear Algebra}
-% \\ \itab{Transport Phenomena (ongoing)} \tab{} \tab{Introduction to Mechanics}
-% % \\ \itab{Process Control (ongoing)} \tab{} \tab{Electrodynamics}
+%	PoR SECTION
+%----------------------------------------------------------------------------------------
 
-% \end{rSection}
 
 \begin{rSection}{POSITION OF RESPONSIBILITY}
 
-\begin{rSubsection}{The Alliance - NSIT's Newspaper}{2014 - 2016}{Managing Editor}{NSIT}
-\item Successfully oversaw the launch of 5 editions as the Managing Editor
-\item Designed 8 editions of the newspaper which reached an audience of 10k people
-\item Revamped the Wordpress website to help kick-start a blog for the journalists
-\end{rSubsection}
+    \begin{rSubsection}{The Alliance - NSIT's Newspaper}{2014 - 2016}
+        {Managing Editor}{NSIT}
+        
+        \item Successfully oversaw the launch of 5 editions as the Managing Editor
+        \item Designed 8 editions of the newspaper which reached an audience of 10k people
+        \item Revamped the Wordpress website to help kick-start a blog for the journalists
+    \end{rSubsection}
 
-%------------------------------------------------
+    %------------------------------------------------
 
-\begin{rSubsection}{MDT Design Team}{2014 - 2016}{Creative Head}{NSIT}
-\item Directly responsible for the publicity of the Cultural \& Technical festivals for 3 years
-\item Designed posters that have collectively reached an audience of 50,000+
-\item Created Sponsorship Brochures each year that helped bring in record sponsorships
-\end{rSubsection}
+    \begin{rSubsection}{MDT Design Team}{2014 - 2016}
+        {Creative Head}{NSIT}
+        
+        \item Directly responsible for the publicity of the Cultural \& Technical festivals for 3 years
+        \item Designed posters that have collectively reached an audience of 50,000+
+        \item Created Sponsorship Brochures each year that helped bring in record sponsorships
+    \end{rSubsection}
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% \begin{rSection}{Extra-Cirrucular} \itemsep -3pt
-% \item Secured Gold in M.P. State Throw Ball competition and represented district in State Hand Ball competition
-% \item Represented Institute in Udghosh’13 and secured second prize in Kho-Kho intramurals
-% \item Secured second prize in Dance Drama competition in Galaxy’14, inter hall cultural competition of IIT Kanpur
-% \item Won second prize in Electromania, circuit game designing competition in Takneek’13, inter hall technical festival of IIT Kanpur
 
+% \begin{rSection}{Extra-Cirrucular} \itemsep -3pt
+%     \item Secured Gold in M.P. State Throw Ball competition and represented district in State Hand Ball competition
+%     \item Represented Institute in Udghosh’13 and secured second prize in Kho-Kho intramurals
+%     \item Secured second prize in Dance Drama competition in Galaxy’14, inter hall cultural competition of IIT Kanpur
+%     \item Won second prize in Electromania, circuit game designing competition in Takneek’13, inter hall technical festival of IIT Kanpur
 % \end{rSection}
 
 \begin{rSection}{Open Source Contributions}
-\item @web-push
-\item @danger-js
-\item form-data-polyfill, drone-plugins docs
+    \item @web-push
+    \item @danger-js
+    \item form-data-polyfill, drone-plugins docs
 \end{rSection}
+
 \end{document}
