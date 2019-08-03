@@ -1,0 +1,19 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: build
+    image: tianon/latex
+    commands:
+      - pdflatex cv_4.tex -output-directory dist
+
+  - name: release
+    image: plugins/github-release
+    settings:
+      api_key:
+        from_secret: github_token
+      files: dist/*
+
+triggers:
+  event: tag
+...
