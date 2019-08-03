@@ -22,7 +22,8 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage{hyperref} % For links
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{fontawesome} % For social icons
+\usepackage[left=0.75in,top=0.4in,right=0.75in,bottom=0.4in]{geometry} % Document margins
 
 \hypersetup{
     colorlinks=false,
@@ -36,10 +37,24 @@
 %----------------------------------------------------------------------------------------
 
 \name{ Rohit Gohri } % Your name
-\address{ New Delhi, India } % Your address
-% TODO: Add specific styling for links
-\address{ rohit-gohri \\ rohit-smpx } % Your profile links
-\address{ (+91)***REMOVED*** \\ gohri.rohit@gmail.com } % Your phone number and email
+% \address{ New Delhi, India } % Your address
+
+% Your profile links
+\address{
+    \faPhone \hspace{0.2mm} (+91) ***REMOVED*** 
+    \\
+    \href {mailto:gohri.rohit@gmail.com}
+        {\faEnvelope \hspace{0.2mm} gohri.rohit@gmail.com}
+    \\
+    \href {https://linkedin.com/in/rohit-gohri} 
+        {\faLinkedin \hspace{0.2mm} rohit-gohri}
+    \\
+    \href {https://github.com/rohit-smpx}
+        {\faGithub \hspace{0.2mm} rohit-smpx}
+}
+% % Your phone number and email
+% \address{
+% }
 
 \begin{document}
 
