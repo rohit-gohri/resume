@@ -34,6 +34,7 @@
 
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
+% TODO: Take social links through variables and cmds
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
