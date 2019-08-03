@@ -12,8 +12,10 @@ steps:
     settings:
       api_key:
         from_secret: github_token
-      files: ./dist/cv.pdf
+      files: 
+        - dist/cv.pdf
+        - cv.pdf
 
-triggers:
+trigger:
   event: tag
 ...
