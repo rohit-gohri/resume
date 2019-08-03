@@ -5,7 +5,7 @@ steps:
   - name: build
     image: tianon/latex
     commands:
-      - pdflatex cv_4.tex -output-directory dist
+      - pdflatex cv.tex -output-directory dist
 
   - name: release
     image: plugins/github-release
