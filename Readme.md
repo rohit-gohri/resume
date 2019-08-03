@@ -1,5 +1,7 @@
 # Resume
 
+[![Build Status](https://cloud.drone.io/api/badges/rohit-smpx/resume/status.svg)](https://cloud.drone.io/rohit-smpx/resume)
+
 Automatically built resume with LaTeX. 
 
 ### [Download latest version](https://go.boring.download/resume)
