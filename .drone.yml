@@ -12,7 +12,7 @@ steps:
     settings:
       api_key:
         from_secret: github_token
-      files: dist/*
+      files: ./dist/cv.pdf
 
 triggers:
   event: tag
