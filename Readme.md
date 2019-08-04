@@ -18,7 +18,7 @@ Automatically built resume with LaTeX.
 
 ## Included Commands
 
-#### \mydate
+### \mydate
 
 Created new date and displays it according to `{shortmonthname}. {year}` format
 
@@ -28,6 +28,21 @@ Created new date and displays it according to `{shortmonthname}. {year}` format
 
 % Use full date so that format can be changed in future without having to change all dates
 \mydate[1]{3}{2017} % Mar. 2017
+
+```
+
+### \showif
+
+Instead of commenting out blocks skip content conditionally so that atleast it is checked by latex to be valid.
+
+```tex
+% Default is false
+\showif{Test Content}
+%
+\showif[false]{Test Content}
+%
+\showif[true]{Test Content}
+% Test Content
 
 ```
 
@@ -52,3 +67,7 @@ For `Palatino` font for the whole document.
 ### [geometry](https://ctan.org/pkg/geometry)
 
 For setting Document margins.
+
+### [ifthen](https://ctan.org/pkg/ifthen)
+
+For conditional logic in [`showif` command](#showif).
