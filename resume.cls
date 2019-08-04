@@ -112,7 +112,7 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-\ifthenelse{\equal{#4}{}}{ % If three args are probided
+\ifthenelse{\equal{#4}{} \AND \NOT \equal{#3}{}}{ % If three args are probided
   {\bf #1, {\normalfont \em #3}} \hfill {#2} % Bold company name, italics position and date on the right
 }{%
   {\bf #1} \hfill {#2} % Bold company name and date on the right

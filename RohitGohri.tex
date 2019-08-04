@@ -71,6 +71,9 @@
     }{ }
 }}
 
+% Normalized italics
+\newcommand{\nem}[1]{\normalfont \em #1}
+
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
@@ -112,14 +115,14 @@
 
 \begin{rSection}{ Education }
 
-    {\bf Netaji Subhas Institute of Technology, {\normalfont \em University of Delhi}} \hfill
+    {\bf Netaji Subhas Institute of Technology, \nem University of Delhi} \hfill
         { \mydate{8}{2013} - \mydate{6}{2017} }
     \\ B.E. in Computer Engineering, CGPA: 7.35 \hfill%
         {\em Delhi, IN}
     \\ {\bfseries Courses}: Computer System Organisation, Operating Systems \smallskip
     % TODO: Change courses  
 
-    {\bf Faith Academy, {\normalfont \em C.B.S.E.}} \hfill 
+    {\bf Faith Academy, \nem C.B.S.E.} \hfill 
         { \mydate{4}{2011} - \mydate{4}{2013} }
     \\ AISCE | 81.7\%, AISSCE | 92.2\% \hfill
         {\em Delhi, IN}
@@ -147,10 +150,11 @@
 
 \begin{rSection}{Work Experience}
 
-    \begin{rSubsection}{\href{https://github.com/smartprix}{Smartprix}}
+    \begin{rSubsection}
+        {\href{https://github.com/smartprix}{Smartprix}}
         { \mydate{9}{2017} - Present }
         {Software Developer}
-        % {Noida, IN}
+        {Noida, IN}
 
         \item Built an email library using Mailgun, \textbf{Redis}, and queue workers
         \item Led a team of 3 as part of a project to globalize a \textbf{VueJS} site and GraphQL API
@@ -166,10 +170,11 @@
 
 %------------------------------------------------
 
-    \begin{rSubsection}{\href{https://github.com/rohit-smpx?tab=repositories&q=Woobus&type=public}{Woobus}}
+    \begin{rSubsection}
+        {\href{https://github.com/rohit-smpx?tab=repositories&q=Woobus&type=public}{Woobus}}
         { \mydate{12}{2015} - \mydate{1}{2016} }
-        {Software Development Intern}
-        % {Bengaluru, IN}
+        {Sofware Devlopment Internship}
+        {Bengaluru, IN}
 
         \item Revamped Cordova App frontend that works with a \textbf{RaspberryPi} to provide offline experiences
         \item Incorporated \textbf{REST} API calls for Audit Reporting into an ExpressJS server
@@ -196,7 +201,7 @@
     \end{rSubsection}
 
     \begin{rSubsection}
-        {\href{https://github.com/rohit-smpx/inno}{Innovision Website}}
+        {\href{https://github.com/rohit-smpx/inno}{Innovision Website}, {\nem NSIT}}
         { \mydate{1}{2016} - \mydate{3}{2016} }
         {}{}
         % {NodeJS, MaterializeCSS, MongoDB}{Delhi, IN}
@@ -207,7 +212,7 @@
     \end{rSubsection}    
 
     \begin{rSubsection}
-        {\href{https://github.com/rohit-smpx/trafficRL}{Adaptive Traffic Control Using Reinforcement Learning}}
+        {\href{https://github.com/rohit-smpx/trafficRL}{Adaptive Traffic Control Using Reinforcement Learning}, {\nem NSIT}}
         { \mydate{1}{2017} - \mydate{6}{2017} }
         {}{}
 
@@ -251,7 +256,7 @@
     \begin{rSubsection}
         {The Alliance - NSIT's Newspaper}
         { \mydate{2}{2014} - \mydate{6}{2017} }
-        {Managing Editor}
+        {Managing Editor}{}
         
         \item Successfully oversaw the launch of 5 editions as the Managing Editor
         \item Designed 8 editions of the newspaper which reached an audience of 10k people
@@ -263,7 +268,7 @@
     \begin{rSubsection}
         {MDT Design Team, NSIT}
         { \mydate{3}{2014} - \mydate{6}{2017} }
-        {Creative Head}
+        {Creative Head}{}
         
         \item Directly responsible for the publicity of the Cultural \& Technical festivals for 3 years
         \item Designed posters that have collectively reached an audience of 50,000+
@@ -279,7 +284,7 @@
     \begin{rSubsection}
         {\href{http://alliancensit.com/our-editions/}{The Alliance - NSIT's Newspaper}}
         { \mydate{2}{2014} - \mydate{6}{2017} }
-        {Managing Editor}
+        {Managing Editor}{}
 
         \item Designed 8 editions and successfully oversaw the launch of 5 editions
         \item Revamped the Wordpress website to archive old editions and kick-start a blog
