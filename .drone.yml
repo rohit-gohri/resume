@@ -5,7 +5,7 @@ steps:
   - name: build
     image: tianon/latex
     commands:
-      - pdflatex RohitGohri.tex -output-directory dist
+      - pdflatex --interaction=errorstopmode -output-directory dist RohitGohri.tex
 
   - name: release
     image: plugins/github-release
@@ -15,7 +15,7 @@ steps:
       files: 
         - dist/RohitGohri.pdf
         - RohitGohri.pdf
+    when:
+      event: tag
 
-trigger:
-  event: tag
 ...
