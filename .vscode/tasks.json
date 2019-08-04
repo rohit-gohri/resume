@@ -10,12 +10,34 @@
             "args": [
                 "dist/RohitGohri.pdf"
             ],
+            "options": {
+                "shell": {
+                    "executable": "C:\\WINDOWS\\System32\\bash.exe",
+                    "args": [
+                        "-c"
+                    ]
+                }
+            },
+            "problemMatcher": [],
+            "isBackground": true,
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build-and-preview",
+            "type": "shell",
+            "command": "/mnt/c/Program Files/SumatraPDF/SumatraPDF.exe",
+            "args": [
+                "dist/RohitGohri.pdf"
+            ],
             "dependsOn": "build-quiet",
             "options": {
                 "shell": {
                     "executable": "C:\\WINDOWS\\System32\\bash.exe",
                     "args": [
-                        "-c",
+                        "-c"
                     ]
                 }
             },
