@@ -4,6 +4,50 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "preview",
+            "type": "shell",
+            "command": "/mnt/c/Program Files/SumatraPDF/SumatraPDF.exe",
+            "args": [
+                "dist/RohitGohri.pdf"
+            ],
+            "dependsOn": "build-quiet",
+            "options": {
+                "shell": {
+                    "executable": "C:\\WINDOWS\\System32\\bash.exe",
+                    "args": [
+                        "-c",
+                    ]
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build-quiet",
+            "type": "shell",
+            "command": "pdflatex.exe",
+            "args": [
+                "--output-directory",
+                "dist",
+                "-quiet",
+                "-interaction",
+                "scrollmode",
+                "RohitGohri.tex"
+            ],
+            "options": {
+                "shell": {
+                    "executable": "C:\\WINDOWS\\System32\\bash.exe",
+                    "args": [
+                        "-c"
+                    ]
+                }
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "build",
             "type": "shell",
             "command": "pdflatex.exe",
