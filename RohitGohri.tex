@@ -28,6 +28,7 @@
 \usepackage{fontawesome}
 \usepackage{datetime}
 \usepackage[left=0.6in,top=0.2in,right=0.6in,bottom=0.2in]{geometry}
+\usepackage{ifthen}
 
 \hypersetup{
     colorlinks=false,
@@ -240,6 +241,10 @@
 
 %----------------------------------------------------------------------------------------
 
+\newbox\vhbox
+\newboolean{IncludeOldExtraCurriculars}
+\setboolean{IncludeOldExtraCurriculars}{false}
+
 \begin{rSection}{Extra-Currucular} \itemsep -3pt
 
     \begin{rSubsection}
@@ -253,20 +258,31 @@
 
     %------------------------------------------------
 
-    % \begin{rSubsection}
-    %     {\href{https://www.facebook.com/mokshansit}{MDT Design Team}, {\normalfont \em Creative Head}}
-    %         { \mydate{3}{2014} - \mydate{6}{2017} }
-    %     {}{} % TODO: NSIT isn't mentioned anywhere
-    %     \item Designed posters and brochures for the Cultural \& Technical festivals of NSIT
-    % \end{rSubsection}
+    % From: https://tex.stackexchange.com/a/243879
+    \setbox\vhbox\vbox{%
+        \begin{rSubsection}
+            {\href{https://www.facebook.com/mokshansit}{MDT Design Team}, {\normalfont \em Creative Head}}
+                { \mydate{3}{2014} - \mydate{6}{2017} }
+            {}{} % TODO: NSIT isn't mentioned anywhere
+            \item Designed posters and brochures for the Cultural \& Technical festivals of NSIT
+        \end{rSubsection}
 
-    % \begin{rSubsection}
-    %     {CSI-NSIT, {\normalfont \em Member}}
-    %         { \mydate{1}{2014} - \mydate{6}{2015} }
-    %     {}{}
-    %     \item 1st Prize, Magazine Cover Design Competition
-    %     \item Held the 2015 CSI Photoshop workshop with 100+ attendees
-    % \end{rSubsection}
+        %------------------------------------------------
+
+        \begin{rSubsection}
+            {CSI-NSIT, {\normalfont \em Member}}
+                { \mydate{1}{2014} - \mydate{6}{2015} }
+            {}{}
+            \item 1st Prize, Magazine Cover Design Competition
+            \item Held the 2015 CSI Photoshop workshop with 100+ attendees
+        \end{rSubsection}
+    \unskip\unpenalty\unpenalty}
+
+    
+    \ifthenelse{\boolean{IncludeOldExtraCurriculars}}{
+        \unvbox\vhbox
+    }{ }
+
 
 \end{rSection}
 
