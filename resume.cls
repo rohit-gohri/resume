@@ -118,8 +118,8 @@
     \ifthenelse{\equal{#3}{}}{% If 2 args are provided
       {\bf #1} \hfill {#2} % Bold company name and date on the right
     }{ % If 4 args are provided
-      {\bf #1} \hfill {#2} % Bold company name and location
-      \\ {\em #3} \hfill {\em #4} % Italic job title and date on the right
+      {\bf #1} \hfill {#4} % Bold company name and location
+      \\ {\em #3} \hfill {\em #2} % Italic job title and date on the right
     }\unskip
   }\unskip
 }{}
