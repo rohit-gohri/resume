@@ -20,11 +20,13 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass[UKenglish]{resume} % Use the custom resume.cls style
+\usepackage{babel}
 \usepackage[stretch=10]{microtype}
 \usepackage[sc]{mathpazo} % Palatino Font 
 \usepackage{hyperref} % For links
 \usepackage{fontawesome} % For social icons
+\usepackage{datetime}
 \usepackage[left=0.6in,top=0.2in,right=0.6in,bottom=0.2in]{geometry} % Document margins
 
 \hypersetup{
@@ -35,9 +37,19 @@
     pdfkeywords={resume, cv, developer, nodejs, devops, ci, typescript, graphql}
 }
 
+\newdateformat{monthyeardate}{
+  \shortmonthname[\THEMONTH]. \THEYEAR
+}
+
+\newcommand{\mydate}[3][1]{%
+{% group start to scope date name
+    \newdate{anon}{#1}{#2}{#3}%
+    \monthyeardate\displaydate{anon}%
+}%
+}
+
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-% TODO: Add command to fmt date in same format
 
 %----------------------------------------------------------------------------------------
 %	VARIABLES
@@ -72,12 +84,14 @@
 \begin{rSection}{ Education }
 
     {\bf Netaji Subhas Institute of Technology, University of Delhi} \hfill {\em Delhi, IN} 
-    \\ B.E. in Computer Engineering, GPA: 7.35 \hfill { Aug. 2013 - Jun. 2017 }
-    % TODO: Change courses 
+    \\ B.E. in Computer Engineering, GPA: 7.35 \hfill%
+        { \mydate{8}{2013} - \mydate{6}{2017} }
     \\ {Courses}: CSO, OS, Networks \smallskip
+    % TODO: Change courses 
 
     {\bf Faith Academy, C.B.S.E.} \hfill {\em Delhi, IN}
-    \\ AISCE | 81.7\%, AISSCE | 92.2\% \hfill { 2011 - 2013 }
+    \\ AISCE | 81.7\%, AISSCE | 92.2\% \hfill
+        { \mydate{4}{2011} - \mydate{4}{2013} }
 
 \end{rSection}
 
@@ -102,7 +116,8 @@
 
 \begin{rSection}{Work Experience}
 
-    \begin{rSubsection}{\href{https://github.com/smartprix}{Smartprix}}{Sep 2015 - Present}
+    \begin{rSubsection}{\href{https://github.com/smartprix}{Smartprix}}
+            { \mydate{9}{2017} - Present }
         {Software Developer}{Noida, IN}
 
         \item Built an email library using Mailgun, \textbf{Redis}, and queue workers
@@ -119,7 +134,8 @@
 
 %------------------------------------------------
 
-    \begin{rSubsection}{\href{https://github.com/rohit-smpx?tab=repositories&q=Woobus&type=public}{Woobus}}{Dec 2015 - Jan 2016}
+    \begin{rSubsection}{\href{https://github.com/rohit-smpx?tab=repositories&q=Woobus&type=public}{Woobus}}
+            { \mydate{12}{2015} - \mydate{1}{2016} }
         {Software Development Intern}{Bengaluru, IN}
 
         \item Revamped Cordova App frontend that works with a \textbf{RaspberryPi} to provide offline experiences
@@ -138,7 +154,7 @@
 % TODO: Move to single line in end
     \begin{rSubsection}
         {Open Source Contributions}
-            {Jan 2019 - Present}
+            { \mydate{1}{2019} - Present }
         {}{}
 
         \item \href{https://github.com/jimmywarting/FormData/pull/87}{\textbf{form-data-polyfill}}: Fixed bug when using polyfill with Blob.js polyfill on IE9
@@ -148,7 +164,7 @@
 
     \begin{rSubsection}
         {\href{https://github.com/rohit-smpx/inno}{Innovision Website}}
-            {Jan 2016 - March 2016}
+            { \mydate{1}{2016} - \mydate{3}{2016} }
         % TODO: not consistent, other places have positions
         {NodeJS, MaterializeCSS, MongoDB}
             {NSIT} % TODO: Change to Delhi, IN
@@ -160,7 +176,7 @@
 
     \begin{rSubsection}
         {\href{https://github.com/rohit-smpx/trafficRL}{Adaptive Traffic Control Using Reinforcement Learning}}
-            {Jan 2017 - June 2017}
+            { \mydate{1}{2017} - \mydate{6}{2017} }
         {Python, SUMO}
             {NSIT}
 
@@ -200,7 +216,8 @@
 
 % \begin{rSection}{POSITION OF RESPONSIBILITY}
 
-%     \begin{rSubsection}{The Alliance - NSIT's Newspaper}{2014 - 2016}
+%     \begin{rSubsection}{The Alliance - NSIT's Newspaper}
+%         { \mydate{2}{2014} - \mydate{6}{2017} }
 %         {Managing Editor}{NSIT}
         
 %         \item Successfully oversaw the launch of 5 editions as the Managing Editor
@@ -210,7 +227,8 @@
 
 %     %------------------------------------------------
 
-%     \begin{rSubsection}{MDT Design Team}{2014 - 2016}
+%     \begin{rSubsection}{MDT Design Team}
+%             { \mydate{3}{2014} - \mydate{6}{2017} }
 %         {Creative Head}{NSIT} % TODO: NSIT should be in title
         
 %         \item Directly responsible for the publicity of the Cultural \& Technical festivals for 3 years
@@ -226,7 +244,7 @@
 
     \begin{rSubsection}
         {\href{http://alliancensit.com/our-editions/}{The Alliance - NSIT's Newspaper}, {\normalfont \em Managing Editor}}
-            {Feb 2014 - Jul 2016}
+            { \mydate{2}{2014} - \mydate{6}{2017} }
         {}{}
         
         \item Designed 8 editions and successfully oversaw the launch of 5 editions
@@ -237,14 +255,14 @@
 
     % \begin{rSubsection}
     %     {\href{https://www.facebook.com/mokshansit}{MDT Design Team}, {\normalfont \em Creative Head}}
-    %         {March 2014 - March 2016}
+    %         { \mydate{3}{2014} - \mydate{6}{2017} }
     %     {}{} % TODO: NSIT isn't mentioned anywhere
     %     \item Designed posters and brochures for the Cultural \& Technical festivals of NSIT
     % \end{rSubsection}
 
     % \begin{rSubsection}
     %     {CSI-NSIT, {\normalfont \em Member}}
-    %         {2014 - 2015}
+    %         { \mydate{1}{2014} - \mydate{6}{2015} }
     %     {}{}
     %     \item 1st Prize, Magazine Cover Design Competition
     %     \item Held the 2015 CSI Photoshop workshop with 100+ attendees
