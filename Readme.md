@@ -20,7 +20,7 @@ Automatically built resume with LaTeX.
 
 ### \mydate
 
-Created new date and displays it according to `{shortmonthname}. {year}` format
+Create new date and displays it according to `{shortmonthname}. {year}` format
 
 ```tex
 % Default day is 01
