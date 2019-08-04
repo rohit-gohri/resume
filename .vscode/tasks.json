@@ -56,7 +56,7 @@
                 "dist",
                 "-quiet",
                 "-interaction",
-                "scrollmode",
+                "nonstopmode",
                 "RohitGohri.tex"
             ],
             "options": {
