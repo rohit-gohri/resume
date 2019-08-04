@@ -111,17 +111,24 @@
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
+\newcommand{\rSubsectionHeading}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+  \ifthenelse{\equal{#4}{} \AND \NOT \equal{#3}{}}{ % If 3 args are provided
+    {\bf #1, {\normalfont \em #3}} \hfill {#2}
+  }{
+    \ifthenelse{\equal{#3}{}}{% If 2 args are provided
+      {\bf #1} \hfill {#2} % Bold company name and date on the right
+    }{ % If 4 args are provided
+      {\bf #1} \hfill {#2} % Bold company name and location
+      \\ {\em #3} \hfill {\em #4} % Italic job title and date on the right
+    }\unskip
+  }\unskip
+}{}
+
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-\ifthenelse{\equal{#4}{} \AND \NOT \equal{#3}{}}{ % If three args are probided
-  {\bf #1, {\normalfont \em #3}} \hfill {#2} % Bold company name, italics position and date on the right
-}{%
-  {\bf #1} \hfill {#2} % Bold company name and date on the right
-  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\ {\em #3} \hfill {\em #4} % Italic job title and location
-  }
-}\smallskip
-\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
- \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  \rSubsectionHeading{#1}{#2}{#3}{#4}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
 }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
