@@ -30,3 +30,25 @@ Created new date and displays it according to `{shortmonthname}. {year}` format
 \mydate[1]{3}{2017} % Mar. 2017
 
 ```
+
+## Packages Used
+
+### [FontAwesome](https://github.com/xdanaux/fontawesome-latex)
+
+Use icons from fontawesome. List of available icons in [docs](http://ctan.imsc.res.in/fonts/fontawesome/doc/fontawesome.pdf).
+
+### [DateTime](https://ctan.org/pkg/datetime)
+
+Used to setup custom date format and custom [date command](#mydate).
+
+### [hyperref](https://github.com/ho-tex/hyperref)
+
+For `\href` links and PDF metadata.
+
+### [mathpazo](https://ctan.org/pkg/mathpazo)
+
+For `Palatino` font for the whole document.
+
+### [geometry](https://ctan.org/pkg/geometry)
+
+For setting Document margins.
