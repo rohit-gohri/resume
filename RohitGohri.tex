@@ -75,10 +75,11 @@
 \name{ Rohit Gohri } % Your name
 % \address{ New Delhi, India } % Your address
 
+\newcommand{\phoneNum}[0]{}
+
 % Your profile links
 \address{
-    \faPhone \hspace{0.2mm} (+91) ***REMOVED*** 
-    \\
+    \phoneNum
     \href {mailto:gohri.rohit@gmail.com}
         {\faEnvelope \hspace{0.2mm} gohri.rohit@gmail.com}
     \\
@@ -91,6 +92,9 @@
 % % Your phone number and email
 % \address{
 % }
+
+% Override any variables/commands through a private file
+\InputIfFileExists{\jobname.tmp}{}{}
 
 \begin{document}
 
