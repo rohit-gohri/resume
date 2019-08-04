@@ -41,13 +41,19 @@
 \newdateformat{monthyeardate}{
   \shortmonthname[\THEMONTH]. \THEYEAR
 }
+\newdateformat{yeardate}{
+  \THEYEAR
+}
 
 \newcommand{\mydate}[3][1]{%
 \unskip{% group start to scope date name
+\ifthenelse{\equal{#2}{}}{% If the third argument is not specified, don't print the job title and location line
+    \newdate{anon}{#1}{1}{#3}%
+    \yeardate\displaydate{anon}%
+}{% 
     \newdate{anon}{#1}{#2}{#3}%
     \monthyeardate\displaydate{anon}%
-}%
-}
+}}}
 
 \newcommand{\showif}[2][false]{%
 {% group start to scope date name
@@ -72,10 +78,15 @@
 %	VARIABLES
 %----------------------------------------------------------------------------------------
 
-\name{ Rohit Gohri } % Your name
-% \address{ New Delhi, India } % Your address
+% Your name
+\name{ Rohit Gohri }
+% Your address
+% \address{ New Delhi, India } 
 
-\newcommand{\phoneNum}[0]{}
+\newcommand{\phoneNum}[0]{
+    % \faPhone \hspace{0.2mm} % Your phone number %
+    % \\
+}
 
 % Your profile links
 \address{
@@ -89,9 +100,6 @@
     \href {https://github.com/rohit-smpx}
         {\faGithub \hspace{0.2mm} rohit-smpx}
 }
-% % Your phone number and email
-% \address{
-% }
 
 % Override any variables/commands through a private file
 \InputIfFileExists{\jobname.tmp}{}{}
