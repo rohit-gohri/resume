@@ -14,3 +14,19 @@ Automatically built resume with LaTeX.
 - [Overleaf](https://www.overleaf.com/): Online Editor
 - [Original Template](https://www.overleaf.com/latex/templates/cv-for-freshers/jkpwvnrdrxpm)
 - Automatic [builds](https://cloud.drone.io/rohit-smpx/resume) with [Drone.io](https://cloud.drone.io) on publishing tag
+
+
+## Included Commands
+
+#### \mydate
+
+Created new date and displays it according to `{shortmonthname}. {year}` format
+
+```tex
+% Default day is 01
+\mydate{3}{2017} % Feb. 2017
+
+% Use full date so that format can be changed in future without having to change all dates
+\mydate[1]{3}{2017} % Mar. 2017
+
+```
