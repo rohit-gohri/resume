@@ -42,7 +42,7 @@
 }
 
 \newcommand{\mydate}[3][1]{%
-{% group start to scope date name
+\unskip{% group start to scope date name
     \newdate{anon}{#1}{#2}{#3}%
     \monthyeardate\displaydate{anon}%
 }%
