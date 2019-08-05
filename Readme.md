@@ -31,6 +31,41 @@ Create new date and displays it according to `{shortmonthname}. {year}` format
 
 ```
 
+### \rSubsectionHeading
+
+Command to print subsection heading. Output depends on number of non empty arguments
+
+```tex
+% 2 Params
+\rSubsectionHeading
+    {Netaji Subhas Institute of Technology}
+    { \mydate{8}{2013} - \mydate{6}{2017} }
+    {}{}
+```
+![2ParamsPreview](./docs/2ParamSubSectionHeading.PNG)
+
+```tex
+% 3 Params
+\rSubsectionHeading
+    {Netaji Subhas Institute of Technology}
+    { \mydate{8}{2013} - \mydate{6}{2017} }
+    {B.E. in Computer Engineering}
+    {}
+```
+
+![3ParamsPreview](./docs/3ParamSubSectionHeading.PNG)
+
+```tex
+% 4 Params
+\rSubsectionHeading
+    {Netaji Subhas Institute of Technology}
+    { \mydate{8}{2013} - \mydate{6}{2017} }
+    {\normalfont B.E. in Computer Engineering}
+    {Delhi, IN}
+```
+
+![4ParamsPreview](./docs/4ParamSubSectionHeading.PNG)
+
 ### \showif
 
 Instead of commenting out blocks skip content conditionally so that atleast it is checked by latex to be valid.
