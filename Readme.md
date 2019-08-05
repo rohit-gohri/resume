@@ -24,11 +24,16 @@ Create new date and displays it according to `{shortmonthname}. {year}` format
 
 ```tex
 % Default day is 01
-\mydate{3}{2017} % Feb. 2017
+\mydate{3}{2017}
+% Feb. 2017
 
 % Use full date so that format can be changed in future without having to change all dates
-\mydate[1]{3}{2017} % Mar. 2017
+\mydate[1]{3}{2017}
+% Mar. 2017
 
+% Only print year by providing empty month
+\mydate{}{2017}
+% 2017
 ```
 
 ### \rSubsectionHeading
@@ -78,7 +83,19 @@ Instead of commenting out blocks skip content conditionally so that atleast it i
 %
 \showif[true]{Test Content}
 % Test Content
+```
 
+Also works for blocks of content:
+
+```tex
+\showif[false]{
+\begin{rSection}{Activities} \itemsep -2pt
+    \item XXXXXXXXXXXXXXX
+    \item YYYYYYYYYYYYYYY
+    \item ZZZZZZZZZZZZZZZ
+\end{rSection}
+}
+%
 ```
 
 ## Packages Used
