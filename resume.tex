@@ -25,13 +25,18 @@
 \usepackage[stretch=10]{microtype}
 \usepackage[sc]{mathpazo} 
 \usepackage{hyperref}
+\usepackage{xcolor}
 \usepackage{fontawesome}
 \usepackage{datetime}
 \usepackage[left=0.6in,top=0.2in,right=0.6in,bottom=0.2in]{geometry}
 \usepackage{ifthen}
 
 \hypersetup{
-    colorlinks=false,
+    colorlinks, %Colours links instead of ugly boxes
+    linkcolor={red!50!black}, %Colour of internal links
+    citecolor={blue!50!black}, %Colour of citations
+    % urlcolor={blue!40!black}, %Colour for external hyperlinks
+    urlcolor={black}, %Colour for external hyperlinks
     pdftitle={Rohit Gohri's Resume},
     pdfauthor={Rohit Gohri <gohri.rohit@gmail.com>},
     pdfsubject={Hire Me! Source: https://github.com/rohit-smpx/resume},
