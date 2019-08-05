@@ -4,7 +4,10 @@
 
 Automatically built resume with LaTeX. 
 
+### [Preview latest version](https://go.boring.download/resume-preview)
+
 ### [Download latest version](https://go.boring.download/resume)
+
 
 ## Resources
 
