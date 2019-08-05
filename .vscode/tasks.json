@@ -52,12 +52,12 @@
             "type": "shell",
             "command": "pdflatex.exe",
             "args": [
-                "--output-directory",
+                "-output-directory",
                 "dist",
                 "-quiet",
                 "-interaction",
                 "nonstopmode",
-                "--job-name",
+                "-job-name",
                 "RohitGohri",
                 "resume.tex"
             ],
@@ -76,9 +76,9 @@
             "type": "shell",
             "command": "pdflatex.exe",
             "args": [
-                "--output-directory",
+                "-output-directory",
                 "dist",
-                "--job-name",
+                "-job-name",
                 "RohitGohri",
                 "resume.tex",
             ],

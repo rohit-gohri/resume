@@ -1,3 +1,4 @@
+# https://manpages.ubuntu.com/manpages/bionic/man1/pdflatex.1.html
 kind: pipeline
 name: default
 
@@ -5,7 +6,18 @@ steps:
   - name: build
     image: tianon/latex
     commands:
-      - pdflatex --interaction=errorstopmode --job-name=RohitGohri resume.tex
+      - pdflatex -interaction errorstopmode -halt-on-error -jobname RohitGohri -draftmode resume.tex
+
+---
+
+kind: pipeline
+name: release
+
+steps:
+  - name: build
+    image: tianon/latex
+    commands:
+      - pdflatex -interaction errorstopmode -halt-on-error -jobname RohitGohri resume.tex
 
   - name: release
     image: plugins/github-release
@@ -14,7 +26,8 @@ steps:
         from_secret: github_token
       files: 
         - RohitGohri.pdf
-    when:
-      event: tag
+
+trigger:
+  event: tag
 
 ...
