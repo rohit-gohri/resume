@@ -2,7 +2,9 @@
 
 [![Build Status](https://cloud.drone.io/api/badges/rohit-smpx/resume/status.svg)](https://cloud.drone.io/rohit-smpx/resume)
 
-Automatically built resume with LaTeX. 
+Automatically built resume with LaTeX. The structure for sections is defined in `resume.cls` file. While the content is in `resume.tex'.
+
+> Based on the [CV For Freshers](https://www.overleaf.com/latex/templates/cv-for-freshers/jkpwvnrdrxpm) template on Overleaf.
 
 ### [Preview latest version](https://go.boring.download/resume-preview)
 

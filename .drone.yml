@@ -5,7 +5,7 @@ steps:
   - name: build
     image: tianon/latex
     commands:
-      - pdflatex --interaction=errorstopmode RohitGohri.tex
+      - pdflatex --interaction=errorstopmode --job-name=RohitGohri resume.tex
 
   - name: release
     image: plugins/github-release

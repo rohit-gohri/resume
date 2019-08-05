@@ -57,7 +57,9 @@
                 "-quiet",
                 "-interaction",
                 "nonstopmode",
-                "RohitGohri.tex"
+                "--job-name",
+                "RohitGohri",
+                "resume.tex"
             ],
             "options": {
                 "shell": {
@@ -74,9 +76,11 @@
             "type": "shell",
             "command": "pdflatex.exe",
             "args": [
-                "RohitGohri.tex",
                 "--output-directory",
-                "dist"
+                "dist",
+                "--job-name",
+                "RohitGohri",
+                "resume.tex",
             ],
             "options": {
                 "shell": {
