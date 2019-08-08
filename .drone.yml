@@ -27,6 +27,17 @@ steps:
       files: 
         - RohitGohri.pdf
 
+  - name: update on site
+    image: smartprix/drone-downstream
+    settings:
+      server: https://cloud.drone.io
+      token:
+        from_secret: drone_token
+      last_successful: true
+      deploy: resume
+      repositories:
+        - rohit-smpx/rohit-smpx.github.io@master
+
 trigger:
   event: tag
 
