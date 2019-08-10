@@ -20,6 +20,34 @@ Automatically built resume with LaTeX. The structure for sections is defined in 
 - [Original Template](https://www.overleaf.com/latex/templates/cv-for-freshers/jkpwvnrdrxpm)
 - Automatic [builds](https://cloud.drone.io/rohit-smpx/resume) with [Drone.io](https://cloud.drone.io) on publishing tag
 
+## Building
+
+Install a LaTeX distribution that includes pdflatex.
+
+### Windows
+
+Use [Scoop](https://scoop.sh/)
+
+`scoop install latex`
+
+#### Run
+
+`pdflatex.exe -output-directory dist resume.tex`
+
+### Docker
+
+Use the [`tianon/latex`](https://hub.docker.com/r/tianon/latex/) image.
+
+#### Run
+
+```sh
+docker run --rm \
+    -v $(pwd):$(pwd) \
+    -w $(pwd) \ 
+    tianon/latex \
+    pdflatex -output-directory dist -interaction errorstopmode -halt-on-error resume.tex
+```
+
 
 ## Included Commands
 
