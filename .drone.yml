@@ -8,6 +8,11 @@ steps:
     commands:
       - pdflatex -interaction errorstopmode -halt-on-error -jobname RohitGohri -draftmode resume.tex
 
+trigger:
+  event:
+    exclude:
+      - tag
+
 ---
 
 kind: pipeline
