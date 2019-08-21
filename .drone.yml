@@ -19,6 +19,14 @@ kind: pipeline
 name: release
 
 steps:
+  - name: add private file
+    image: alpine:latest
+    environment:
+      PRIVATE_CONTENT:
+        from_secret: private_file
+    commands:
+      - echo $PRIVATE_CONTENT > RohitGohri.tmp
+
   - name: build
     image: tianon/latex
     commands:
