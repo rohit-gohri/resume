@@ -32,7 +32,10 @@ Use [Scoop](https://scoop.sh/)
 
 #### Run
 
-`pdflatex.exe -output-directory dist resume.tex`
+```
+mkdir dist
+pdflatex.exe -output-directory dist resume.tex
+```
 
 ### Docker
 
@@ -41,11 +44,8 @@ Use the [`tianon/latex`](https://hub.docker.com/r/tianon/latex/) image.
 #### Run
 
 ```sh
-docker run --rm \
-    -v $(pwd):$(pwd) \
-    -w $(pwd) \ 
-    tianon/latex \
-    pdflatex -output-directory dist -interaction errorstopmode -halt-on-error resume.tex
+mkdir dist
+docker run -v `pwd`:`pwd` -w `pwd` tianon/latex pdflatex -output-directory dist -interaction errorstopmode -halt-on-error resume.tex
 ```
 
 
