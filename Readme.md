@@ -20,6 +20,15 @@ Automatically built resume with LaTeX. The structure for sections is defined in 
 - [Original Template](https://www.overleaf.com/latex/templates/cv-for-freshers/jkpwvnrdrxpm)
 - Automatic [builds](https://cloud.drone.io/rohit-smpx/resume) with [Drone.io](https://cloud.drone.io) on publishing tag
 
+## Using as a template
+
+Use the green __"Use this template"__ button to create a new repository with this repository's files as a template. There are two files only: 
+
+- `resume.cls`: Defines the structure and all the custom commands. No need to modify this.
+- `resume.tex`: This is the file where all your content for the resume goes. Your name, email, links, etc. are defined through commands. Feel free to move things around and change them.
+
+If there is any problem with the format, feel free to open an issue in this repo. It will probably involve a fix in the `resume.cls` file. Once that gets pushed, you can just copy the new `resume.cls` file over your existing one.
+
 ## Building
 
 ### Online
@@ -59,9 +68,9 @@ docker run --rm -v `pwd`:`pwd` -w `pwd` tianon/latex pdflatex -output-directory 
 ```
 
 
-## Included Commands
+## Included Commands/Environments
 
-### \fmtdate
+### \fmtdate - Command
 
 Create new date and displays it according to `{shortmonthname}. {year}` format
 
@@ -79,7 +88,42 @@ Create new date and displays it according to `{shortmonthname}. {year}` format
 % 2017
 ```
 
-### \rSubsectionHeading
+### \showif - Command
+
+Instead of commenting out blocks skip content conditionally so that atleast it is checked by latex to be valid.
+
+```tex
+% Default is false
+\showif{Test Content}
+%
+\showif[false]{Test Content}
+%
+\showif[true]{Test Content}
+% Test Content
+```
+
+Also works for blocks of content:
+
+```tex
+\showif[false]{
+\begin{rSection}{Activities} \itemsep -2pt
+    \item XXXXXXXXXXXXXXX
+    \item YYYYYYYYYYYYYYY
+    \item ZZZZZZZZZZZZZZZ
+\end{rSection}
+}
+%
+```
+
+### \rSection - Environment
+
+Define a section with a title and many subsections/items.
+
+### \rSubsection - Environment
+
+Define a subsection with a subsection heading (first 4 args, defined below) and a list of items under it.
+
+### \rSubsectionHeading - Command
 
 Command to print subsection heading. Output depends on number of non empty arguments
 
@@ -114,33 +158,6 @@ Command to print subsection heading. Output depends on number of non empty argum
 
 ![4ParamsPreview](./docs/4ParamSubSectionHeading.PNG)
 
-### \showif
-
-Instead of commenting out blocks skip content conditionally so that atleast it is checked by latex to be valid.
-
-```tex
-% Default is false
-\showif{Test Content}
-%
-\showif[false]{Test Content}
-%
-\showif[true]{Test Content}
-% Test Content
-```
-
-Also works for blocks of content:
-
-```tex
-\showif[false]{
-\begin{rSection}{Activities} \itemsep -2pt
-    \item XXXXXXXXXXXXXXX
-    \item YYYYYYYYYYYYYYY
-    \item ZZZZZZZZZZZZZZZ
-\end{rSection}
-}
-%
-```
-
 ## Packages Used
 
 ### [FontAwesome](https://github.com/xdanaux/fontawesome-latex)
@@ -149,7 +166,7 @@ Use icons from fontawesome. List of available icons in [docs](http://ctan.imsc.r
 
 ### [DateTime](https://ctan.org/pkg/datetime)
 
-Used to setup custom date format and custom [date command](#fmtdate).
+Used to setup custom date format and custom date command.
 
 ### [hyperref](https://github.com/ho-tex/hyperref)
 
@@ -165,4 +182,4 @@ For setting Document margins.
 
 ### [ifthen](https://ctan.org/pkg/ifthen)
 
-For conditional logic in [`showif` command](#showif).
+For conditional logic in `showif` command.
