@@ -55,7 +55,7 @@ Use the [`tianon/latex`](https://hub.docker.com/r/tianon/latex/) image.
 
 ```sh
 mkdir dist
-docker run -v `pwd`:`pwd` -w `pwd` tianon/latex pdflatex -output-directory dist -interaction errorstopmode -halt-on-error resume.tex
+docker run --rm -v `pwd`:`pwd` -w `pwd` tianon/latex pdflatex -output-directory dist -interaction errorstopmode -halt-on-error resume.tex
 ```
 
 
