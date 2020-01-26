@@ -50,7 +50,7 @@
   \THEYEAR
 }
 
-\newcommand{\mydate}[3][1]{%
+\newcommand{\fmtdate}[3][1]{%
 \unskip{% group start to scope date name
 \ifthenelse{\equal{#2}{}}{% If the 2nd arg is not provided only print the year
     \newdate{anon}{#1}{1}{#3}%
@@ -124,7 +124,7 @@
 
     \rSubsectionHeading
         {Netaji Subhas Institute of Technology, \nem University of Delhi}
-        { \mydate{8}{2013} - \mydate{6}{2017} }
+        { \fmtdate{8}{2013} - \fmtdate{6}{2017} }
         {\normalfont B.E. in Computer Engineering, CGPA: 7.35}
         {Delhi, IN}
     % \\ {\bfseries Courses}: Computer System Organisation, Operating Systems \smallskip
@@ -132,7 +132,7 @@
 
     \rSubsectionHeading
         {Faith Academy, \nem C.B.S.E.}
-        { \mydate{4}{2011} - \mydate{4}{2013} }
+        { \fmtdate{4}{2011} - \fmtdate{4}{2013} }
         {\normalfont AISSCE, Percentage: 92.2\%}
         {Delhi, IN}
 
@@ -161,7 +161,7 @@
 
     \begin{rSubsection}
         {\href{https://www.smartprix.com}{Smartprix.com}}
-        { \mydate{9}{2017} - \mydate{11}{2019} }
+        { \fmtdate{9}{2017} - \fmtdate{11}{2019} }
         {Software Developer}
         {Noida, IN}
 
@@ -184,7 +184,7 @@
 
     \begin{rSubsection}
         {\href{https://github.com/rohit-smpx?tab=repositories&q=Woobus&type=public}{WooBus.in}}
-        { \mydate{12}{2015} - \mydate{1}{2016} }
+        { \fmtdate{12}{2015} - \fmtdate{1}{2016} }
         {Software Devlopment Internship}
         {Bengaluru, IN}
 
@@ -205,7 +205,7 @@
     % TODO: Move to single line in end?
     \begin{rSubsection}
         {Open Source Contributions}
-        { \mydate{5}{2019} - Present }
+        { \fmtdate{5}{2019} - Present }
         {}{}
 
         % \item \href{https://github.com/bahmutov/snap-shot-core/pull/208}{\textbf{snap-shot-core}}: Added a feature to store snapshot files in directory relative to test file in a plugin for mocha test
@@ -216,7 +216,7 @@
 
     \begin{rSubsection}
         {\href{https://github.com/rohit-smpx/inno}{Innovision Website}, {\nem NSIT}}
-        { \mydate{1}{2016} - \mydate{3}{2016} }
+        { \fmtdate{1}{2016} - \fmtdate{3}{2016} }
         {}{}
         \item Led a team to design and develop the website for NSIT’s Tech Fest using \textbf{NodeJS}, MongoDB, and MaterializeCSS
         \item Worked on user \& event management, social login, \textbf{email campaigns}, and deployments
@@ -225,7 +225,7 @@
 
     \begin{rSubsection}
         {\href{https://github.com/rohit-smpx/trafficRL}{Adaptive Traffic Light Control Using Reinforcement Learning (RL)}, {\nem NSIT}}
-        { \mydate{1}{2017} - \mydate{6}{2017} }
+        { \fmtdate{1}{2017} - \fmtdate{6}{2017} }
         {}{}
 
         \item Ran a study comparing different methods to reduce traffic in a traffic simulator (\href{https://sumo.dlr.de}{SUMO})
@@ -263,7 +263,7 @@
 \begin{rSection}{Extra-Curricular} \itemsep -3pt
     \begin{rSubsection}
         {\href{http://alliancensit.com/our-editions/}{The Alliance - NSIT's Newspaper}}
-        { \mydate{2}{2014} - \mydate{6}{2017} }
+        { \fmtdate{2}{2014} - \fmtdate{6}{2017} }
         {}{}
 
         \item Designed 8 editions and successfully oversaw the launch of 5 editions as the \textbf{Managing Editor}
@@ -275,7 +275,7 @@
     \showif[false]{%
     \begin{rSubsection}
         {\href{https://www.facebook.com/mokshansit}{MDT Design Team - NSIT}, {\normalfont \em Creative Head}}
-        { \mydate{3}{2014} - \mydate{6}{2017} }
+        { \fmtdate{3}{2014} - \fmtdate{6}{2017} }
         {}{}
 
         \item Designed posters and brochures for the Cultural \& Technical festivals of NSIT
@@ -287,7 +287,7 @@
     \showif[false]{%
     \begin{rSubsection}
         {CSI-NSIT, {\normalfont \em Member}}
-        { \mydate{1}{2014} - \mydate{6}{2015} }
+        { \fmtdate{1}{2014} - \fmtdate{6}{2015} }
         {}{}
         \item 1st Prize, Magazine Cover Design Competition
         \item Held the 2015 CSI Photoshop workshop with 100+ attendees
@@ -319,7 +319,7 @@
 
     \begin{rSubsection}
         {The Alliance - NSIT's Newspaper}
-        { \mydate{2}{2014} - \mydate{6}{2017} }
+        { \fmtdate{2}{2014} - \fmtdate{6}{2017} }
         {Managing Editor}{}
 
         \item Successfully oversaw the launch of 5 editions as the Managing Editor
@@ -331,7 +331,7 @@
 
     \begin{rSubsection}
         {MDT Design Team, NSIT}
-        { \mydate{3}{2014} - \mydate{6}{2017} }
+        { \fmtdate{3}{2014} - \fmtdate{6}{2017} }
         {Creative Head}{}
 
         \item Directly responsible for the publicity of the Cultural \& Technical festivals for 3 years

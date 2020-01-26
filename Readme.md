@@ -51,21 +51,21 @@ docker run -v `pwd`:`pwd` -w `pwd` tianon/latex pdflatex -output-directory dist 
 
 ## Included Commands
 
-### \mydate
+### \fmtdate
 
 Create new date and displays it according to `{shortmonthname}. {year}` format
 
 ```tex
 % Default day is 01
-\mydate{3}{2017}
+\fmtdate{3}{2017}
 % Feb. 2017
 
 % Use full date so that format can be changed in future without having to change all dates
-\mydate[1]{3}{2017}
+\fmtdate[1]{3}{2017}
 % Mar. 2017
 
 % Only print year by providing empty month
-\mydate{}{2017}
+\fmtdate{}{2017}
 % 2017
 ```
 
@@ -77,7 +77,7 @@ Command to print subsection heading. Output depends on number of non empty argum
 % 2 Params
 \rSubsectionHeading
     {Netaji Subhas Institute of Technology}
-    { \mydate{8}{2013} - \mydate{6}{2017} }
+    { \fmtdate{8}{2013} - \fmtdate{6}{2017} }
     {}{}
 ```
 ![2ParamsPreview](./docs/2ParamSubSectionHeading.PNG)
@@ -86,7 +86,7 @@ Command to print subsection heading. Output depends on number of non empty argum
 % 3 Params
 \rSubsectionHeading
     {Netaji Subhas Institute of Technology}
-    { \mydate{8}{2013} - \mydate{6}{2017} }
+    { \fmtdate{8}{2013} - \fmtdate{6}{2017} }
     {B.E. in Computer Engineering}
     {}
 ```
@@ -97,7 +97,7 @@ Command to print subsection heading. Output depends on number of non empty argum
 % 4 Params
 \rSubsectionHeading
     {Netaji Subhas Institute of Technology}
-    { \mydate{8}{2013} - \mydate{6}{2017} }
+    { \fmtdate{8}{2013} - \fmtdate{6}{2017} }
     {\normalfont B.E. in Computer Engineering}
     {Delhi, IN}
 ```
@@ -139,7 +139,7 @@ Use icons from fontawesome. List of available icons in [docs](http://ctan.imsc.r
 
 ### [DateTime](https://ctan.org/pkg/datetime)
 
-Used to setup custom date format and custom [date command](#mydate).
+Used to setup custom date format and custom [date command](#fmtdate).
 
 ### [hyperref](https://github.com/ho-tex/hyperref)
 
