@@ -3,7 +3,7 @@
 %
 % This class file defines the structure and design of the template. 
 %
-% Version: v0.3.6
+% Version: v1.0.0
 % Modified By Rohit Gohri (https://rohit.boring.download)
 % 
 % Original header:
@@ -22,7 +22,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{resume}[2020/01/26 v0.3.6 Resume Class]
+\ProvidesClass{resume}[2020/01/26 v1.0.0 Resume Class]
 
 \LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
