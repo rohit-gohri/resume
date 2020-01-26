@@ -22,26 +22,36 @@ Automatically built resume with LaTeX. The structure for sections is defined in 
 
 ## Building
 
-Install a LaTeX distribution that includes pdflatex.
+### Online
 
-### Windows
+#### [Overleaf](https://www.overleaf.com/)
+
+- [Download a zip](https://github.com/rohit-smpx/resume/archive/master.zip) of the project.
+- Go to Overleaf and login/signup
+- "New Project" -> "Upload Project" : Upload the zip
+
+### Locally
+
+Install a LaTeX distribution that includes `pdflatex`.
+
+#### Windows
 
 Use [Scoop](https://scoop.sh/)
 
 `scoop install latex`
 
-#### Run
+##### Run
 
 ```
 mkdir dist
 pdflatex.exe -output-directory dist resume.tex
 ```
 
-### Docker
+#### Docker
 
 Use the [`tianon/latex`](https://hub.docker.com/r/tianon/latex/) image.
 
-#### Run
+##### Run
 
 ```sh
 mkdir dist
