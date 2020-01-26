@@ -130,12 +130,15 @@
       \@ifundefined{@getCity}{}{%
         \faMapMarker \hspace{0.2mm} \@getCity}
       \@ifundefined{@getEmail}{}{%
+        \\
         \href {mailto:\@getEmail}
             {\faEnvelope \hspace{0.2mm} \@getEmail}}
       \@ifundefined{@getLinkedIn}{}{%
+        \\
         \href {https://linkedin.com/in/\@getLinkedIn}
             {\faLinkedin \hspace{0.2mm} \@getLinkedIn}}
       \@ifundefined{@getGithub}{}{%
+        \\
         \href {https://github.com/\@getGithub}
             {\faGithub \hspace{0.2mm} \@getGithub}}
       \@ifundefined{@getCustomLink}{}{\@getCustomLink}
