@@ -1,12 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Medium Length Professional CV - RESUME CLASS FILE
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
 % This class file defines the structure and design of the template. 
 %
+% Version: v0.3.6
+% Modified By Rohit Gohri (https://rohit.boring.download)
+% 
 % Original header:
+% 
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+% 
 % Copyright (C) 2010 by Trey Hunner
 %
 % Copying and distribution of this file, with or without modification,
@@ -18,7 +22,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
+\ProvidesClass{resume}[2020/01/26 v0.3.6 Resume Class]
 
 \LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
@@ -37,15 +41,16 @@
 \pagestyle{empty} % Suppress page numbers
 
 \hypersetup{
-    colorlinks, %Colours links instead of ugly boxes
+    colorlinks={true}, %Colours links instead of ugly boxes
     linkcolor={red!50!black}, %Colour of internal links
     citecolor={blue!50!black}, %Colour of citations
     % urlcolor={blue!40!black}, %Colour for external hyperlinks
     urlcolor={black}, %Colour for external hyperlinks
-    pdftitle={Rohit Gohri's Resume},
-    pdfauthor={Rohit Gohri <gohri.rohit@gmail.com>},
-    pdfsubject={Hire Me! Source: https://github.com/rohit-smpx/resume},
-    pdfkeywords={resume, cv, developer, nodejs, devops, ci, typescript, graphql, elastic}
+    pdftitle={Resume}
+    % pdftitle={ \@name's Resume },
+    % pdfauthor={ \@name <\@getEmail> },
+    % pdfsubject={Hire Me!},
+    % pdfkeywords={resume, cv, developer, nodejs, devops, ci, typescript, graphql, elastic}
 }
 
 \newdateformat{monthyeardate}{
@@ -88,40 +93,54 @@
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
 %----------------------------------------------------------------------------------------
-%	HEADINGS COMMANDS: Commands for printing name and address
+%	HEADINGS COMMANDS: Commands for printing name and links
+% 
+% Defines the commands to set variables and sets empty defaults
 %----------------------------------------------------------------------------------------
 
-\def \name#1{\def\@name{#1}} % Defines the \name command to set name
-\def \@name {} % Sets \@name to empty by default
-% TODO: Take social links through variables and cmds
+\def \name#1{\def\@name{#1}} 
+\def \@name {}
 
-\def \addressSep {$\diamond$} % Set default address separator to a diamond
+\def \setCity#1{\def\@getCity{#1}} 
+\def \@getCity {}
 
-% One, two or three address lines can be specified 
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
+\def \setEmail#1{\def\@getEmail{#1}}
+\def \@getEmail {}
 
-% \address command can be used to set the first, second, and third address (last 2 optional)
-\def \address #1{
-  \@ifundefined{@addresstwo}{
-    \def \@addresstwo {#1}
-  }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
-}
+\def \setPhoneNum#1{\def\@getPhoneNum{#1}} 
+\def \@getPhoneNum {}
 
-% \printaddress is used to style an address line (given as input)
-\def \printaddress #1{
+\def \setLinkedIn#1{\def\@getLinkedIn{#1}} 
+\def \@getLinkedIn {}
+
+\def \setGithub#1{\def\@getGithub{#1}} 
+\def \@getGithub {}
+
+\def \setCustomLink#1{\def\@getCustomLink{#1}} 
+\def \@getCustomLink {}
+
+\def \linkSeparator {$\diamond$} % Set default separator to a diamond
+
+\def \printLinks {
   \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
+    \def \\ {\linkSeparator\ }
+    \centerline{%
+      \@ifundefined{@getCity}{}{%
+        \faMapMarker \hspace{0.2mm} \@getCity}
+      \@ifundefined{@getEmail}{}{%
+        \href {mailto:\@getEmail}
+            {\faEnvelope \hspace{0.2mm} \@getEmail}}
+      \@ifundefined{@getLinkedIn}{}{%
+        \href {https://linkedin.com/in/\@getLinkedIn}
+            {\faLinkedin \hspace{0.2mm} \@getLinkedIn}}
+      \@ifundefined{@getGithub}{}{%
+        \href {https://github.com/\@getGithub}
+            {\faGithub \hspace{0.2mm} \@getGithub}}
+      \@ifundefined{@getCustomLink}{}{\@getCustomLink}
+    }
   \endgroup
   \par
-  \addressskip
+  \smallskip
 }
 
 % \printname is used to print the name as a page header
@@ -140,12 +159,7 @@
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
+  \printLinks
 }
 
 %----------------------------------------------------------------------------------------
@@ -195,7 +209,6 @@
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
 \def\nameskip{\bigskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
