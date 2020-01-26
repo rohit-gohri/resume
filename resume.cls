@@ -47,10 +47,6 @@
     % urlcolor={blue!40!black}, %Colour for external hyperlinks
     urlcolor={black}, %Colour for external hyperlinks
     pdftitle={Resume}
-    % pdftitle={ \@name's Resume },
-    % pdfauthor={ \@name <\@getEmail> },
-    % pdfsubject={Hire Me!},
-    % pdfkeywords={resume, cv, developer, nodejs, devops, ci, typescript, graphql, elastic}
 }
 
 \newdateformat{monthyeardate}{
@@ -119,6 +115,12 @@
 \def \setCustomLink#1{\def\@getCustomLink{#1}} 
 \def \@getCustomLink {}
 
+\def \setPdfKeywords#1{\def\@getPdfKeywords{#1}} 
+\def \@getPdfKeywords {}
+
+\def \setPdfSubject#1{\def\@getPdfSubject{#1}} 
+\def \@getPdfSubject {}
+
 \def \linkSeparator {$\diamond$} % Set default separator to a diamond
 
 \def \printLinks {
@@ -158,6 +160,14 @@
 \let\ori@document=\document
 \renewcommand{\document}{
   \ori@document  % Begin document
+
+  \hypersetup{
+    pdftitle={ \@name's Resume },
+    pdfauthor={ \@name <\@getEmail> },
+    pdfsubject={ \@getPdfSubject },
+    pdfkeywords={ \@getPdfKeywords }
+}
+
   \printname % Print the name specified with \name
   \printLinks
 }
