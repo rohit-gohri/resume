@@ -25,8 +25,67 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{babel}
+\usepackage[stretch=10]{microtype}
+\usepackage[sc]{mathpazo} % Required for `Palatino` font
+\usepackage{hyperref} % Required for creating links (\href)
+\usepackage{xcolor}
+\usepackage{fontawesome} % Required for icons. List of available icons at http://ctan.imsc.res.in/fonts/fontawesome/doc/fontawesome.pdf
+\usepackage{datetime} % Required for custom date formatting
+\usepackage[left=0.6in,top=0.2in,right=0.6in,bottom=0.2in]{geometry} % Required for setting Document margins
 
 \pagestyle{empty} % Suppress page numbers
+
+\hypersetup{
+    colorlinks, %Colours links instead of ugly boxes
+    linkcolor={red!50!black}, %Colour of internal links
+    citecolor={blue!50!black}, %Colour of citations
+    % urlcolor={blue!40!black}, %Colour for external hyperlinks
+    urlcolor={black}, %Colour for external hyperlinks
+    pdftitle={Rohit Gohri's Resume},
+    pdfauthor={Rohit Gohri <gohri.rohit@gmail.com>},
+    pdfsubject={Hire Me! Source: https://github.com/rohit-smpx/resume},
+    pdfkeywords={resume, cv, developer, nodejs, devops, ci, typescript, graphql, elastic}
+}
+
+\newdateformat{monthyeardate}{
+  \shortmonthname[\THEMONTH]. \THEYEAR
+}
+\newdateformat{yeardate}{
+  \THEYEAR
+}
+
+\newcommand{\fmtdate}[3][1]{%
+\unskip{% group start to scope date name
+\ifthenelse{\equal{#2}{}}{% If the 2nd arg is not provided only print the year
+    \newdate{anon}{#1}{1}{#3}%
+    \yeardate\displaydate{anon}%
+}{%
+    \newdate{anon}{#1}{#2}{#3}%
+    \monthyeardate\displaydate{anon}%
+}}}
+
+\newcommand{\showif}[2][false]{%
+{% group start to scope date name
+    % From: https://tex.stackexchange.com/a/243879
+    \newbox\anonvhbox
+    \newboolean{IncludeAnonItem}
+    \setboolean{IncludeAnonItem}{#1}
+
+    \setbox\anonvhbox\vbox{%
+    #2
+    \unskip\unpenalty\unpenalty}
+
+    \ifthenelse{\boolean{IncludeAnonItem}}{
+    \unvbox\anonvhbox
+    }{ }
+}}
+
+% Normalized italics
+\newcommand{\nem}[1]{\normalfont \em #1}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
