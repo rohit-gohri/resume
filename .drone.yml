@@ -49,7 +49,7 @@ steps:
       last_successful: true
       deploy: resume
       repositories:
-        - rohit-smpx/rohit-smpx.github.io@master
+        - rohit-gohri/rohit-gohri.github.io@master
 
 trigger:
   event: tag

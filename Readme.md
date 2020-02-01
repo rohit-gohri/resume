@@ -1,6 +1,6 @@
 # Resume
 
-[![Build Status](https://cloud.drone.io/api/badges/rohit-smpx/resume/status.svg)](https://cloud.drone.io/rohit-smpx/resume)
+[![Build Status](https://cloud.drone.io/api/badges/rohit-gohri/resume/status.svg)](https://cloud.drone.io/rohit-gohri/resume)
 
 Automatically built resume with LaTeX. The structure for sections is defined in `resume.cls` file. While the content is in `resume.tex`.
 
@@ -18,7 +18,7 @@ Automatically built resume with LaTeX. The structure for sections is defined in 
 - [Useful Packages](https://tex.stackexchange.com/questions/553/what-packages-do-people-load-by-default-in-latex)
 - [Overleaf](https://www.overleaf.com/): Online Editor
 - [Original Template](https://www.overleaf.com/latex/templates/cv-for-freshers/jkpwvnrdrxpm)
-- Automatic [builds](https://cloud.drone.io/rohit-smpx/resume) with [Drone.io](https://cloud.drone.io) on publishing tag
+- Automatic [builds](https://cloud.drone.io/rohit-gohri/resume) with [Drone.io](https://cloud.drone.io) on publishing tag
 
 ## Using as a template
 
@@ -35,7 +35,7 @@ If there is any problem with the format, feel free to open an issue in this repo
 
 #### [Overleaf](https://www.overleaf.com/)
 
-- [Download a zip](https://github.com/rohit-smpx/resume/archive/master.zip) of the project.
+- [Download a zip](https://github.com/rohit-gohri/resume/archive/master.zip) of the project.
 - Go to Overleaf and login/signup
 - "New Project" -> "Upload Project" : Upload the zip
 
