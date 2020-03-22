@@ -50,6 +50,7 @@ steps:
       deploy: resume
       repositories:
         - rohit-gohri/rohit-gohri.github.io@master
+        - rohit-gohri/blog@master
 
 trigger:
   event: tag
