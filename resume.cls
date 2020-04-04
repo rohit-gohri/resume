@@ -66,7 +66,7 @@
     \monthyeardate\displaydate{anon}%
 }}}
 
-\newcommand{\showif}[2][false]{%
+\newcommand{\draft}[2][false]{%
 {% group start to scope date name
     % From: https://tex.stackexchange.com/a/243879
     \newbox\anonvhbox

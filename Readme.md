@@ -88,24 +88,24 @@ Create new date and displays it according to `{shortmonthname}. {year}` format
 % 2017
 ```
 
-### \showif - Command
+### \draft - Command
 
 Instead of commenting out blocks skip content conditionally so that atleast it is checked by latex to be valid.
 
 ```tex
-% Default is false
-\showif{Test Content}
+% Default output is hidden
+\draft{Test Content}
 %
-\showif[false]{Test Content}
-%
-\showif[true]{Test Content}
+
+% Show in output, preferably remove command once you've decided to keep the content
+\draft[true]{Test Content}
 % Test Content
 ```
 
 Also works for blocks of content:
 
 ```tex
-\showif[false]{
+\draft[false]{
 \begin{rSection}{Activities} \itemsep -2pt
     \item XXXXXXXXXXXXXXX
     \item YYYYYYYYYYYYYYY
@@ -182,4 +182,4 @@ For setting Document margins.
 
 ### [ifthen](https://ctan.org/pkg/ifthen)
 
-For conditional logic in `showif` command.
+For conditional logic in `draft` command.
