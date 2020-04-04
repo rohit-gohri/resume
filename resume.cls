@@ -3,7 +3,7 @@
 %
 % This class file defines the structure and design of the template. 
 %
-% Version: v1.0.1
+% Version: v1.1.0
 % Modified By Rohit Gohri (https://rohit.page)
 % 
 % Original header:
@@ -83,6 +83,9 @@
     }{ }
 }}
 
+% NOTE: Deprecated
+\newcommand{\showif}[2][false]{\draft[#1]{#2}}
+
 % Normalized italics
 \newcommand{\nem}[1]{\normalfont \em #1}
 
@@ -119,6 +122,9 @@
 
 \def \setWebsite#1{\def\@getWebsite{\trim{#1}}} 
 \def \@getWebsite {}
+
+% NOTE: Deprecated
+\def \setCustomLink#1{\def\@getWebsite{\trim{#1}}} 
 
 \def \setPdfKeywords#1{\def\@getPdfKeywords{#1}} 
 \def \@getPdfKeywords {}

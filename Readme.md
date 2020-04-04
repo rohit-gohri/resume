@@ -88,7 +88,7 @@ Create new date and displays it according to `{shortmonthname}. {year}` format
 % 2017
 ```
 
-### \draft - Command
+### \draft (renamed from \showif) - Command
 
 Instead of commenting out blocks skip content conditionally so that atleast it is checked by latex to be valid.
 
