@@ -34,6 +34,7 @@
 \usepackage[sc]{mathpazo} % Required for `Palatino` font
 \usepackage{hyperref} % Required for creating links (\href)
 \usepackage{xcolor}
+\usepackage{trimspaces} % Required for triming variable values (https://tex.stackexchange.com/a/484290)
 \usepackage{fontawesome} % Required for icons. List of available icons at http://ctan.imsc.res.in/fonts/fontawesome/doc/fontawesome.pdf
 \usepackage{datetime} % Required for custom date formatting
 \usepackage[left=0.6in,top=0.2in,right=0.6in,bottom=0.2in]{geometry} % Required for setting Document margins
@@ -88,6 +89,10 @@
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
+\newcommand*{\trim}[1]{%
+  \trim@spaces@noexp{#1}%
+}
+
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and links
 % 
@@ -100,20 +105,20 @@
 \def \setCity#1{\def\@getCity{#1}} 
 \def \@getCity {}
 
-\def \setEmail#1{\def\@getEmail{#1}}
+\def \setEmail#1{\def\@getEmail{\trim{#1}}}
 \def \@getEmail {}
 
 \def \setPhoneNum#1{\def\@getPhoneNum{#1}} 
 \def \@getPhoneNum {}
 
-\def \setLinkedIn#1{\def\@getLinkedIn{#1}} 
+\def \setLinkedIn#1{\def\@getLinkedIn{\trim{#1}}} 
 \def \@getLinkedIn {}
 
-\def \setGithub#1{\def\@getGithub{#1}} 
+\def \setGithub#1{\def\@getGithub{\trim{#1}}}
 \def \@getGithub {}
 
-\def \setCustomLink#1{\def\@getCustomLink{#1}} 
-\def \@getCustomLink {}
+\def \setWebsite#1{\def\@getWebsite{\trim{#1}}} 
+\def \@getWebsite {}
 
 \def \setPdfKeywords#1{\def\@getPdfKeywords{#1}} 
 \def \@getPdfKeywords {}
@@ -130,18 +135,17 @@
       \@ifundefined{@getCity}{}{%
         \faMapMarker \hspace{0.2mm} \@getCity}
       \@ifundefined{@getEmail}{}{%
-        \\
         \href {mailto:\@getEmail}
             {\faEnvelope \hspace{0.2mm} \@getEmail}}
       \@ifundefined{@getLinkedIn}{}{%
-        \\
         \href {https://linkedin.com/in/\@getLinkedIn}
             {\faLinkedin \hspace{0.2mm} \@getLinkedIn}}
       \@ifundefined{@getGithub}{}{%
-        \\
         \href {https://github.com/\@getGithub}
             {\faGithub \hspace{0.2mm} \@getGithub}}
-      \@ifundefined{@getCustomLink}{}{\@getCustomLink}
+      \@ifundefined{@getWebsite}{}{%
+        \href {https://\@getWebsite}
+            {\faLink \hspace{0.2mm} \@getWebsite}}
     }
   \endgroup
   \par
