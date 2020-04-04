@@ -3,8 +3,8 @@
 %
 % This class file defines the structure and design of the template. 
 %
-% Version: v1.0.0
-% Modified By Rohit Gohri (https://rohit.boring.download)
+% Version: v1.0.1
+% Modified By Rohit Gohri (https://rohit.page)
 % 
 % Original header:
 % 
