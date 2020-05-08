@@ -1,22 +1,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-%
-% Version: v1.1.0
+% Rohit Gohri's LaTeX Resume
+% https://github.com/rohit-gohri/resume
+% 
+% Version: v1.2.0 (2020/05/08)
 % By Rohit Gohri (https://rohit.page)
 % 
-% Original author:
+% 
+% Based On:
+% Medium Length Professional CV
 % 
 % Downloaded from:
 % http://www.LaTeXTemplates.com
 % 
 % Trey Hunner (http://www.treyhunner.com/)
-% Version 2.0 (8/5/13) 
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
+% Version 2.0 (8/5/13)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -77,8 +74,8 @@
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 
         Languages \& Frameworks     & Javascript, Typescript, NodeJS, GraphQL, VueJS, MarkoJS, jQuery, Mocha, Jest, C++ \\
-        Software \& Tools           & PM2, Nginx, Redis, PostgreSQL, Ansible, ElasticStack(ELK), Grafana, Docker \\
-        Other                       & Linux, Bash, SSH, Git, LaTeX, Adobe Photoshop \& InDesign \\
+        Software \& Tools           & PM2, Nginx, Gitlab, Ansible, MongoDB, Redis, PostgreSQL, ElasticStack(ELK), Grafana, Docker \\
+        Other                       & Linux, Bash, SSH, AWS, Git, LaTeX, Adobe Photoshop \& InDesign \\
     \end{tabular}
 
 \end{rSection}
@@ -90,7 +87,20 @@
 \begin{rSection}{Work Experience}
 
     \begin{rSubsection}
-        {\href{https://www.smartprix.com}{Smartprix.com}}
+        {\href{https://collegedunia.com}{Collegedunia Web Pvt. Ltd.}}
+        { \fmtdate{1}{2019} - Present }
+        {Sr. Software Developer}
+        {Gurugram, IN}
+
+        \item Leading company wide CI/CD adoption using \textbf{Gitlab CI/CD}
+        \item Working as a Team Lead for a React, Node, MongoDB fullstack application
+        \item Automating \textbf{AWS} infrastructure and deploys with \textbf{Ansible} and Gitlab
+        \item Developing common NodeJS tooling for use across projects
+
+    \end{rSubsection}
+
+    \begin{rSubsection}
+        {\href{https://www.smartprix.com}{Smartprix Web Pvt. Ltd.}}
         { \fmtdate{9}{2017} - \fmtdate{10}{2019} }
         {Software Developer}
         {Noida, IN}
@@ -98,15 +108,15 @@
         \item Led a team to make website ready for US launch, worked on VueJS admin, \textbf{NodeJS} backend, and GraphQL API
         \item Built an email library using NodeJS, Mailgun, and \textbf{Redis} backed queue workers
         \item Responsible for production \textbf{deployments} with PM2 and infrastructure configuration with \textbf{Ansible}
-        \item Developed a script around Wal-E to take continuous backups of \textbf{PostgreSQL} DB and save weekly backups to GCS
+        % \item Developed a script around Wal-E to take continuous backups of \textbf{PostgreSQL} DB and save weekly backups to GCS
         \item Generated dynamic popularity factor for products through \textbf{ElasticSearch} queries on visitor data
         \item Enabled static type checking of projects by adding \textbf{Typescript} type definitions to existing NodeJS modules
         \item Built automated \textbf{CI pipelines} to increase coverage by \textbf{26\%} and run integration tests across repositories
-        \item Deployed a logging \& monitoring environment (ELK, InfluxDB) which gathers log, visit \& system data
-        \item Setup \textbf{Kibana \& Grafana} and made dashboards to monitor and visualize various metrics, and set alerts
-        \item Migrated legacy jQuery code to a modern \textbf{Webpack} build system, fixing IE9 support
-        \item Improved a \textbf{GraphQL} schema and query builder to support extending interfaces and global fragments
-        \item Converted a Mocha test suite to use Snapshot testing allowing new features to be added more easily
+        \item Deployed a logging \& monitoring environment (EFK, InfluxDB, Grafana) which gathers logs, visits \& system data
+        % \item Setup \textbf{Kibana \& Grafana} and made dashboards to monitor and visualize various metrics, and set alerts
+        % \item Migrated legacy jQuery code to a modern \textbf{Webpack} build system, fixing IE9 support
+        % \item Improved a \textbf{GraphQL} schema and query builder to support extending interfaces and global fragments
+        % \item Converted a Mocha test suite to use Snapshot testing allowing new features to be added more easily
 
     \end{rSubsection}
 
