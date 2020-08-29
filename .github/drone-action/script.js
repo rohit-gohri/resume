@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-const {Connect} = require('sm-utils');
+const axios = require('axios').default;
 
 const target = process.env.DEPLOY_TARGET || process.env.DEPLOY_ENV || 'production';
 const branch = process.env.DEPLOY_BRANCH || 'master';
@@ -12,14 +12,26 @@ const apiHost = process.env.DRONE_SERVER || 'https://cloud.drone.io';
 const apiToken = process.env.DRONE_TOKEN;
 const apiBase = `${apiHost}/api`;
 
+function tryParse(data) {
+    if (typeof data === 'string') {
+        try {
+            return JSON.parse(data);
+        }
+        catch(err) {
+            return {};
+        }
+    }
+    return data;
+}
+
 async function getBuild() {
     if (build) {
         return Number(build);
     }
-    const response = await Connect.url(
+    const response = await axios.get(
         `${apiBase}/repos/${githubRepo}/builds`
     );
-    const builds = JSON.parse(response.body);
+    const builds = tryParse(response.data);
 
     for (let i = 0; i < builds.length; i++ ) {
         const buildItem = builds[i];
@@ -33,10 +45,16 @@ async function getBuild() {
 
 async function promoteBuild(buildNumber) {
     console.log(`Promoting build ${buildNumber} to ${target}`);
-    const response = await Connect.post(
-        `${apiBase}/repos/${githubRepo}/builds/${buildNumber}/promote?target=${target}`
-    ).bearerToken(apiToken);
-    const deploy = JSON.parse(response.body);
+    const response = await axios.request(
+        {
+            method: 'POST',
+            url: `${apiBase}/repos/${githubRepo}/builds/${buildNumber}/promote?target=${target}`,
+            headers: {
+                Authorization: `Bearer ${apiToken}`,
+            },
+        }
+    );
+    const deploy = tryParse(response.data);
     return deploy.number;
 }
 
