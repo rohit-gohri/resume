@@ -1,7 +1,7 @@
 # Resume
 
-[![Trigger Status](https://cloud.drone.io/api/badges/rohit-gohri/resume/status.svg)](https://cloud.drone.io/rohit-gohri/resume)
 [![Build Status](https://github.com/rohit-gohri/resume/workflows/Preview/badge.svg?branch=master)](https://github.com/rohit-gohri/resume/actions?query=branch%3Amaster)
+![Release Status](https://github.com/rohit-gohri/resume/workflows/Release/badge.svg)
 
 Automatically built resume with LaTeX. The structure for sections is defined in `resume.cls` file. While the content is in `resume.tex`.
 
