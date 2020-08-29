@@ -64,7 +64,7 @@ async function main() {
 }
 
 main().then((newBld) => {
-    console.log(`Deploy triggered succesfully: ${apiHost}/${githubRepo}/${newBld}`);
+    console.log(`Deploy triggered succesfully: ${apiHost}/${githubRepo}/${newBld} to target ${target}`);
 }).catch((err) => {
     console.error(`There was an error:\n`, err);
 });
