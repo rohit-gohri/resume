@@ -41,6 +41,6 @@ jobs:
         uses: ./.github/drone-action
         env:
           DEPLOY_ENV: resume
-          GITHUB_REPOSITORY: rohit-gohri/blog
+          DRONE_REPOSITORY: rohit-gohri/blog
           DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

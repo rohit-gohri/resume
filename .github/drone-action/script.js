@@ -5,7 +5,7 @@ const target = process.env.DEPLOY_TARGET || process.env.DEPLOY_ENV || 'productio
 const branch = process.env.DEPLOY_BRANCH || 'master';
 let build = process.env.DEPLOY_BUILD;
 
-const githubRepo = process.env.GITHUB_REPOSITORY// Full repo name: owner/repo
+const githubRepo = process.env.DRONE_REPOSITORY || process.env.GITHUB_REPOSITORY// Full repo name: owner/repo
 const githubUser = process.env.GITHUB_ACTOR;
 
 const apiHost = process.env.DRONE_SERVER || 'https://cloud.drone.io';
