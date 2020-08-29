@@ -12,6 +12,10 @@ const apiHost = process.env.DRONE_SERVER || 'https://cloud.drone.io';
 const apiToken = process.env.DRONE_TOKEN;
 const apiBase = `${apiHost}/api`;
 
+const headers = {
+    Authorization: `Bearer ${apiToken}`,
+};
+
 function tryParse(data) {
     if (typeof data === 'string') {
         try {
@@ -29,7 +33,9 @@ async function getBuild() {
         return Number(build);
     }
     const response = await axios.get(
-        `${apiBase}/repos/${githubRepo}/builds`
+        `${apiBase}/repos/${githubRepo}/builds`, {
+            headers,
+        }
     );
     const builds = tryParse(response.data);
 
@@ -49,9 +55,7 @@ async function promoteBuild(buildNumber) {
         {
             method: 'POST',
             url: `${apiBase}/repos/${githubRepo}/builds/${buildNumber}/promote?target=${target}`,
-            headers: {
-                Authorization: `Bearer ${apiToken}`,
-            },
+            headers,
         }
     );
     const deploy = tryParse(response.data);
