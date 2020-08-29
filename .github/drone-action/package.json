@@ -1,0 +1,29 @@
+{
+  "name": "drone-deploy",
+  "version": "0.1.0",
+  "description": "A small script to trigger deployments on drone",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit-smpx/rohit-smpx.github.io.git"
+  },
+  "keywords": [
+    "drone",
+    "github-action",
+    "github",
+    "script"
+  ],
+  "author": "Rohit Gohri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohit-smpx/rohit-smpx.github.io/issues"
+  },
+  "homepage": "https://github.com/rohit-smpx/rohit-smpx.github.io#readme",
+  "dependencies": {
+    "sm-utils": "^2.17.20"
+  }
+}
