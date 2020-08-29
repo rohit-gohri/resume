@@ -5,12 +5,12 @@ LABEL "com.github.actions.description"="Trigger Drone.io Deployment"
 LABEL "com.github.actions.icon"="triangle"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="http://github.com/rohit-smpx/rohit-smpx.github.io"
-LABEL "homepage"="http://github.com/rohit-smpx/rohit-smpx.github.io"
-LABEL "maintainer"="Rohit Gohri <gohri.rohit@gmail.com>"
+LABEL "repository"="http://github.com/rohit-gohri/resume"
+LABEL "homepage"="http://github.com/rohit-gohri/resume"
+LABEL "maintainer"="Rohit Gohri <work@rohit.page>"
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
 
