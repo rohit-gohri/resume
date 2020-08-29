@@ -1,45 +1,9 @@
-# https://manpages.ubuntu.com/manpages/bionic/man1/pdflatex.1.html
-kind: pipeline
-name: default
-
-steps:
-  - name: build
-    image: tianon/latex
-    commands:
-      - pdflatex -interaction errorstopmode -halt-on-error -jobname RohitGohri -draftmode resume.tex
-
-trigger:
-  event:
-    exclude:
-      - tag
-
 ---
-
+# https://manpages.ubuntu.com/manpages/bionic/man1/pdflatex.1.html
 kind: pipeline
 name: release
 
 steps:
-  - name: add private file
-    image: alpine:latest
-    environment:
-      PRIVATE_CONTENT:
-        from_secret: private_file
-    commands:
-      - echo $PRIVATE_CONTENT > RohitGohri.tmp
-
-  - name: build
-    image: tianon/latex
-    commands:
-      - pdflatex -interaction errorstopmode -halt-on-error -jobname RohitGohri resume.tex
-
-  - name: release
-    image: plugins/github-release
-    settings:
-      api_key:
-        from_secret: github_token
-      files: 
-        - RohitGohri.pdf
-
   - name: update on site
     image: plugins/downstream
     settings:
@@ -55,5 +19,3 @@ steps:
 
 trigger:
   event: tag
-
-...
