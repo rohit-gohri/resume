@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/rohit-smpx/rohit-smpx.github.io#readme",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.21.1"
   }
 }
