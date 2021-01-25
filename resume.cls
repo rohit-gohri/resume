@@ -126,6 +126,10 @@
 \def \setWebsite#1{\def\@getWebsite{\trim{#1}}} 
 \def \@getWebsite {}
 
+\def \setWebsiteLink#1{\def\@getWebsiteLink{\trim{#1}}} 
+\def \@getWebsiteLink {\@getWebsite}
+
+
 % NOTE: Deprecated
 \def \setCustomLink#1{\def\@getWebsite{\trim{#1}}} 
 
@@ -153,7 +157,7 @@
         \href {https://github.com/\@getGithub}
             {\faGithub \hspace{0.2mm} \@getGithub}}
       \@ifundefined{@getWebsite}{}{%
-        \href {https://\@getWebsite}
+        \href {https://\@getWebsiteLink}
             {\faLink \hspace{0.2mm} \@getWebsite}}
     }
   \endgroup
