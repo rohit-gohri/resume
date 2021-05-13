@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - resume.tex
-      - resume.cls
   pull_request:
 
 jobs:
