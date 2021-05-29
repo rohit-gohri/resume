@@ -22,12 +22,12 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
 
       - name: Generate PDF
-        uses: xu-cheng/latex-action@master
+        uses: xu-cheng/latex-action@v2
         with:
           root_file: |
             resume.tex
           args: |
-            -pdf -interaction=nonstopmode -halt-on-error -jobname=RohitGohri
+            -pdf -interaction=nonstopmode -file-line-error -halt-on-error -jobname=RohitGohri
 
       - name: Upload preview artifacts
         uses: actions/upload-artifact@v1
@@ -40,6 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' }}
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: resume-preview
+
       - name: Upload Pre-Release
         uses: eine/tip@master
         with:
