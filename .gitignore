@@ -1,5 +1,16 @@
-dist
-node_modules
+logs
 *.zip
 *.log
 *.tmp
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Output
+dist
+
+# misc
+.DS_Store
