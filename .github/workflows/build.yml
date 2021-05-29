@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - "v*"
   pull_request:
 
 jobs:
@@ -11,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
+      - name: Add private overrides for releases
+        env:
+          PRIVATE_CONTENT: ${{ secrets.PRIVATE_CONTENT }}
+        run: |
+          echo $PRIVATE_CONTENT > RohitGohri.tmp
+        if: startsWith(github.ref, 'refs/tags/v')
 
       - name: Generate PDF
         uses: xu-cheng/latex-action@master
@@ -25,3 +34,28 @@ jobs:
         with:
           name: resume-preview
           path: RohitGohri.pdf
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
+    steps:
+      - name: Upload Pre-Release
+        uses: eine/tip@master
+        with:
+          tag: next
+          rm: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            RohitGohri.pdf
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: RohitGohri.pdf
+          draft: false
+          prerelease: false
+        if: startsWith(github.ref, 'refs/tags/v')
