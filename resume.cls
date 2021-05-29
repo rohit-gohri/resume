@@ -124,14 +124,20 @@
 \def \setLinkedIn#1{\def\@getLinkedIn{\trim{#1}}} 
 \def \@getLinkedIn {}
 
+\def \setLinkedInLink#1{\def\@getLinkedInLink{\trim{#1}}} 
+\def \@getLinkedInLink {https://linkedin.com/in/\@getLinkedIn}
+
 \def \setGithub#1{\def\@getGithub{\trim{#1}}}
 \def \@getGithub {}
+
+\def \setGithubLink#1{\def\@getGithubLink{\trim{#1}}} 
+\def \@getGithubLink {https://github.com/\@getGithub}
 
 \def \setWebsite#1{\def\@getWebsite{\trim{#1}}} 
 \def \@getWebsite {}
 
 \def \setWebsiteLink#1{\def\@getWebsiteLink{\trim{#1}}} 
-\def \@getWebsiteLink {\@getWebsite}
+\def \@getWebsiteLink {https://\@getWebsite}
 
 
 % NOTE: Deprecated
@@ -155,13 +161,13 @@
         \href {mailto:\@getEmail}
             {\faEnvelope \hspace{0.2mm} \@getEmail}}
       \@ifundefined{@getLinkedIn}{}{%
-        \href {https://linkedin.com/in/\@getLinkedIn}
+        \href {\@getLinkedInLink}
             {\faLinkedin \hspace{0.2mm} \@getLinkedIn}}
       \@ifundefined{@getGithub}{}{%
-        \href {https://github.com/\@getGithub}
+        \href {\@getGithubLink}
             {\faGithub \hspace{0.2mm} \@getGithub}}
       \@ifundefined{@getWebsite}{}{%
-        \href {https://\@getWebsiteLink}
+        \href {\@getWebsiteLink}
             {\faLink \hspace{0.2mm} \@getWebsite}}
     }
   \endgroup
