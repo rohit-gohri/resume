@@ -7,13 +7,17 @@
 % Version: v1.0.0 (2020/05/04)
 % By Rohit Gohri (https://rohit.page)
 % 
-% 
-% Based On:
+% Copyright (C) 2021 by Rohit Gohri
+%
+%%%%%%%%%%%% Based On: %%%%%%%%%%%%
 % Medium Length Professional CV
 % 
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
 % 
+% Trey Hunner (http://www.treyhunner.com/)
+% Version 2.0 (8/5/13)
+%
 % Copyright (C) 2010 by Trey Hunner
 % 
 % Copying and distribution of this file, with or without modification,
