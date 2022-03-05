@@ -169,8 +169,8 @@
       \ifthenelse{\equal{@getWebsite}{}}{}{%
         \href {\@getWebsiteLink}
             {\faLink \hspace{0.2mm} \@getWebsite}}
-      \ifthenelse{\equal{@getPhoneNum}{}}{}{%
-          \faPhone \hspace{0.2mm} \@getPhoneNum}
+      % \ifthenelse{\equal{@getPhoneNum}{}}{}{%
+      %     \faPhone \hspace{0.2mm} \@getPhoneNum}
     }
   \endgroup
   \par
