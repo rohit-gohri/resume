@@ -155,21 +155,21 @@
   \begingroup
     \def \\ {\linkSeparator\ }
     \centerline{%
-      \@ifundefined{@getCity}{}{%
+      \@ifthenelse{\equal{@getCity}{}}{}{%
         \faMapMarker \hspace{0.2mm} \@getCity}
-      \@ifundefined{@getEmail}{}{%
+      \@ifthenelse{\equal{@getEmail}{}}{}{%
         \href {mailto:\@getEmail}
             {\faEnvelope \hspace{0.2mm} \@getEmail}}
-      \@ifundefined{@getLinkedIn}{}{%
+      \@ifthenelse{\equal{@getLinkedIn}{}}{}{%
         \href {\@getLinkedInLink}
             {\faLinkedin \hspace{0.2mm} \@getLinkedIn}}
-      \@ifundefined{@getGithub}{}{%
+      \@ifthenelse{\equal{@getGithub}{}}{}{%
         \href {\@getGithubLink}
             {\faGithub \hspace{0.2mm} \@getGithub}}
-      \@ifundefined{@getWebsite}{}{%
+      \@ifthenelse{\equal{@getWebsite}{}}{}{%
         \href {\@getWebsiteLink}
             {\faLink \hspace{0.2mm} \@getWebsite}}
-      \@ifundefined{@getPhoneNum}{}{%
+      \@ifthenelse{\equal{@getPhoneNum}{}}{}{%
           \faPhone \hspace{0.2mm} \@getPhoneNum}
     }
   \endgroup
