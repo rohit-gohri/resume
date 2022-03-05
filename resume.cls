@@ -169,6 +169,8 @@
       \@ifundefined{@getWebsite}{}{%
         \href {\@getWebsiteLink}
             {\faLink \hspace{0.2mm} \@getWebsite}}
+      \@ifundefined{@getPhoneNum}{}{%
+          \faPhone \hspace{0.2mm} \@getPhoneNum}
     }
   \endgroup
   \par
