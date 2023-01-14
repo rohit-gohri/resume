@@ -228,13 +228,13 @@
 
 \newcommand{\rSubsectionHeading}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
   \ifthenelse{\equal{#4}{} \AND \NOT \equal{#3}{}}{ % If 3 args are provided
-    {\bf #1, {\normalfont \em #3}} \hfill {#2}
+    {\ifthenelse{\equal{#1}{}}{}{\bf #1,} {\normalfont \em #3}} \hfill {\em #2}
   }{
     \ifthenelse{\equal{#3}{}}{% If 2 args are provided
-      {\bf #1} \hfill {#2} % Bold company name and date on the right
+      {\bf #1} \hfill {\normalfont #2} % Bold company name and date on the right
     }{ % If 4 args are provided
-      {\bf #1} \hfill {#4} % Bold company name and location
-      \\ {\em #3} \hfill {\em #2} % Italic job title and date on the right
+      {\bf #1} \hfill {\normalfont #4} % Bold company name and location
+      \\ \normalfont {\em #3} \hfill {\em #2} % Italic job title and date on the right
     }\unskip
   }\unskip
 }{}
