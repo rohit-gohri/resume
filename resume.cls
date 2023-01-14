@@ -242,7 +242,7 @@
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
   \rSubsectionHeading{#1}{#2}{#3}{#4}
   \smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  \begin{list}{$\cdot$}{\leftmargin=0em\normalfont} % \cdot used for bullets, no indentation
   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
 }{
   \end{list}
