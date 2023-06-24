@@ -9,14 +9,14 @@ Automatically built resume with LaTeX. The structure for sections is defined in 
 
 ## [Template](https://github.com/rohit-gohri/resume-template)
 
-This is based of my resume template at https://github.com/rohit-gohri/resume-template. Check it out for how to create your own version.
+This is based of my resume template at <https://github.com/rohit-gohri/resume-template>. Check it out for how to create your own version.
 
 ### Blog Post: [CI/CD for your Resume](https://rohit.page/blog/projects/ci-cd-for-your-resume-wth-this-github-template/?utm_source=github&utm_medium=repo&utm_campaign=resume)
 
 ### Building
 
-Moved to https://github.com/rohit-gohri/resume-template#building
+Moved to <https://github.com/rohit-gohri/resume-template#building>
 
 ### Docs
 
-Moved to https://github.com/rohit-gohri/resume-template#included-commandsenvironments
+Moved to <https://github.com/rohit-gohri/resume-template#included-commandsenvironments>
