@@ -7,7 +7,7 @@
 % Version: v1.0.0 (2020/05/04)
 % By Rohit Gohri (https://rohit.page)
 % 
-% Copyright (C) 2021 by Rohit Gohri
+% Copyright (C) 2023 by Rohit Gohri
 %
 %%%%%%%%%%%% Based On: %%%%%%%%%%%%
 % Medium Length Professional CV
@@ -231,7 +231,7 @@
     {\ifthenelse{\equal{#1}{}}{}{\bf #1,} {\normalfont \em #3}} \hfill {\em #2}
   }{
     \ifthenelse{\equal{#3}{}}{% If 2 args are provided
-      {\bf #1} \hfill {\normalfont #2} % Bold company name and date on the right
+      {\bf #1} \hfill {\em #2} % Bold company name and date on the right
     }{ % If 4 args are provided
       {\bf #1} \hfill {\normalfont #4} % Bold company name and location
       \\ \normalfont {\em #3} \hfill {\em #2} % Italic job title and date on the right
