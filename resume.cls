@@ -4,7 +4,7 @@
 %
 % This class file defines the structure and design of the template. For content see the `resume.tex` file.
 %
-% Version: v1.0.0 (2020/05/04)
+% Version: v1.1.0 (2023/06/24)
 % By Rohit Gohri (https://rohit.page)
 % 
 % Copyright (C) 2023 by Rohit Gohri
@@ -226,20 +226,20 @@
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newcommand{\rSubsectionHeading}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+\newcommand{\rSubsectionHeading}[4]{ % 4 input arguments - title, date range, job title and location
   \ifthenelse{\equal{#4}{} \AND \NOT \equal{#3}{}}{ % If 3 args are provided
     {\ifthenelse{\equal{#1}{}}{}{\bf #1,} {\normalfont \em #3}} \hfill {\em #2}
   }{
     \ifthenelse{\equal{#3}{}}{% If 2 args are provided
-      {\bf #1} \hfill {\em #2} % Bold company name and date on the right
+      {\bf #1} \hfill {\normalfont \em #2} % Bold title and italics date on the right
     }{ % If 4 args are provided
-      {\bf #1} \hfill {\normalfont #4} % Bold company name and location
-      \\ \normalfont {\em #3} \hfill {\em #2} % Italic job title and date on the right
+      {\bf #1} \hfill {\normalfont #4} % Bold title and normal font location
+      \\ \normalfont {\em #3} \hfill {\em #2} % Italic job title and italics date on the right
     }\unskip
   }\unskip
 }{}
 
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, date range, job title and location
   \rSubsectionHeading{#1}{#2}{#3}{#4}
   \smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em\normalfont} % \cdot used for bullets, no indentation

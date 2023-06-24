@@ -1,0 +1,16 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "docker-latex",
+      "command": "./build.sh",
+      "args": ["%DOC%"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "docker-latex",
+      "tools": ["docker-latex"]
+    }
+  ]
+}
