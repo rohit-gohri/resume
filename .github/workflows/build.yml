@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
 
       # - name: Add private overrides for releases
       #   env:
@@ -30,7 +30,7 @@ jobs:
             -pdf -interaction=nonstopmode -file-line-error -halt-on-error -jobname=RohitGohri
 
       - name: Upload preview artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: resume-preview
           path: RohitGohri.pdf
@@ -41,7 +41,7 @@ jobs:
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: resume-preview
 
